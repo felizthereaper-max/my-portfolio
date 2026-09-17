@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+    margin: 0%;
+    background-image: url(https://www.istockphoto.com/photos/photo-image-art);
+}
+    .red-box{
+        background-color: black;
+        color: white;
+    }
+    .yellow-box{
+background-color: brown;
+color: darkgreen;
+    }
