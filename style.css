@@ -1,13 +1,11 @@
-body{
-    background-color: aqua;
-    margin: 0%;
-    background-image: url(https://www.istockphoto.com/photos/photo-image-art);
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 100px;
 }
-    .red-box{
-        background-color: black;
-        color: white;
-    }
-    .yellow-box{
-background-color: brown;
-color: darkgreen;
-    }
+
+h1 {
+    font-size: 50px;
+}
