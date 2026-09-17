@@ -2,61 +2,908 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+    <meta
+        name="description"
+        content="Personal blog and learning portfolio of a student from Oxford Secondary School, Butwal, Nepal."
+    >
+
+    <meta
+        name="author"
+        content="Feliz"
+    >
+
+    <title>Feliz | My Learning Journey</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <h2>My Portfolio</h2>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                <span class="logo-symbol">&lt;/&gt;</span>
+                Feliz<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#mentor">Mentor</a>
+                </li>
+
+                <li>
+                    <a href="#school">School</a>
+                </li>
+
+                <li>
+                    <a href="#blog">Blog</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <a href="#contact" class="nav-button">
+                Contact Me
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <p class="small-heading">
+                        👋 Welcome to my blog
+                    </p>
+
+                    <h1>
+                        Hi, I'm
+                        <span>Feliz</span>
+                    </h1>
+
+                    <h2>
+                        Student • Coder • Learner
+                    </h2>
+
+                    <p class="hero-description">
+                        Welcome to my personal blog where I share my
+                        learning journey, coding projects, school life,
+                        experiences and the things I'm passionate about.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#about" class="primary-button">
+                            Explore My Journey
+                        </a>
+
+                        <a href="#blog" class="secondary-button">
+                            Read My Blog
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+
+                        <div>
+                            <strong>📍</strong>
+                            <span>Butwal, Nepal</span>
+                        </div>
+
+                        <div>
+                            <strong>🎓</strong>
+                            <span>Oxford Secondary School</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="code-window">
+
+                        <div class="window-top">
+
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+
+                        </div>
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="purple">const</span>
+                                student
+                                =
+                                <span class="orange">{</span>
+                            </p>
+
+                            <p class="indent">
+                                name:
+                                <span class="green">
+                                    "Feliz"
+                                </span>,
+                            </p>
+
+                            <p class="indent">
+                                school:
+                                <span class="green">
+                                    "Oxford"
+                                </span>,
+                            </p>
+
+                            <p class="indent">
+                                city:
+                                <span class="green">
+                                    "Butwal"
+                                </span>,
+                            </p>
+
+                            <p class="indent">
+                                passion:
+                                <span class="green">
+                                    "Coding"
+                                </span>
+                            </p>
+
+                            <p>
+                                <span class="orange">}</span>;
+                            </p>
+
+                            <br>
+
+                            <p>
+                                <span class="purple">while</span>
+                                (learning) {
+                            </p>
+
+                            <p class="indent">
+                                grow();
+                            </p>
+
+                            <p class="indent">
+                                build();
+                            </p>
+
+                            <p class="indent">
+                                improve();
+                            </p>
+
+                            <p>
+                                }
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+
+        <section id="about" class="section about-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    ABOUT ME
+                </p>
+
+                <h2>
+                    My Learning Journey
+                </h2>
+
+                <p>
+                    A little introduction about who I am and what
+                    I'm learning.
+                </p>
+
+            </div>
+
+
+            <div class="about-container">
+
+                <div class="about-text">
+
+                    <h3>
+                        I'm a student who loves learning new things.
+                    </h3>
+
+                    <p>
+                        Hello! I'm Feliz, a student from Butwal, Nepal.
+                        I'm currently studying at Oxford Secondary School.
+                    </p>
+
+                    <p>
+                        I have a strong interest in computers, websites,
+                        programming and technology. I enjoy experimenting
+                        with HTML, CSS and JavaScript and creating things
+                        that I can actually see and use.
+                    </p>
+
+                    <p>
+                        This website is a place where I can document my
+                        progress, share what I learn and keep track of
+                        my journey as I continue improving my skills.
+                    </p>
+
+
+                    <div class="about-stats">
+
+                        <div class="stat-card">
+                            <strong>01</strong>
+                            <span>Student</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <strong>02</strong>
+                            <span>Coder</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <strong>03</strong>
+                            <span>Learner</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Why I Code
+                    </h3>
+
+                    <p>
+                        Coding gives me the ability to turn ideas into
+                        real projects. Every website I create teaches
+                        me something new.
+                    </p>
+
+                    <div class="quote">
+                        "Learn something new every day."
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS SECTION
+        ========================== -->
+
+        <section id="skills" class="section skills-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    MY SKILLS
+                </p>
+
+                <h2>
+                    Things I'm Learning
+                </h2>
+
+                <p>
+                    These are some of the technologies and skills
+                    I'm currently exploring.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+
+                    <div class="skill-icon html-icon">
+                        HTML
+                    </div>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Learning how websites are structured using
+                        semantic HTML elements.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width: 85%;"></span>
+                    </div>
+
+                    <small>
+                        Learning progress
+                    </small>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon css-icon">
+                        CSS
+                    </div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Creating beautiful layouts, animations,
+                        responsive designs and modern interfaces.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width: 75%;"></span>
+                    </div>
+
+                    <small>
+                        Learning progress
+                    </small>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon js-icon">
+                        JS
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Learning how to make websites interactive
+                        with JavaScript.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width: 55%;"></span>
+                    </div>
+
+                    <small>
+                        Learning progress
+                    </small>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon code-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Combining HTML, CSS and JavaScript to create
+                        complete websites.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width: 65%;"></span>
+                    </div>
+
+                    <small>
+                        Learning progress
+                    </small>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MENTOR SECTION
+        ========================== -->
+
+        <section id="mentor" class="section mentor-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    MY MENTOR
+                </p>
+
+                <h2>
+                    Someone Who Helped Me Learn
+                </h2>
+
+                <p>
+                    A teacher who helped me understand technology
+                    and coding.
+                </p>
+
+            </div>
+
+
+            <div class="mentor-container">
+
+                <div class="mentor-image-container">
+
+                    <!--
+                    Rename your uploaded photo to:
+
+                    bibek-sir.jpg
+
+                    and put it in the same folder as index.html.
+                    -->
+
+                    <img
+                        src="bibek-sir.jpg"
+                        alt="Mentor photo"
+                        class="mentor-image"
+                    >
+
+                </div>
+
+
+                <div class="mentor-content">
+
+                    <span class="mentor-badge">
+                        MY MENTOR
+                    </span>
+
+                    <h3>
+                        Bibek Sir
+                    </h3>
+
+                    <p class="mentor-role">
+                        Teacher & Coding Mentor
+                    </p>
+
+                    <p>
+                        I would like to thank my mentor, Bibek Sir,
+                        for helping me learn about coding, websites
+                        and technology.
+                    </p>
+
+                    <p>
+                        The things I have learned from him have helped
+                        me understand how websites are built and have
+                        encouraged me to keep practicing and creating
+                        my own projects.
+                    </p>
+
+                    <div class="mentor-quote">
+
+                        <span class="quote-mark">
+                            “
+                        </span>
+
+                        Learning to code is not just about writing
+                        code. It's about learning how to solve problems,
+                        experiment and keep improving.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SCHOOL SECTION
+        ========================== -->
+
+        <section id="school" class="section school-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    MY SCHOOL
+                </p>
+
+                <h2>
+                    Oxford Secondary School
+                </h2>
+
+                <p>
+                    My school in Butwal, Nepal.
+                </p>
+
+            </div>
+
+
+            <div class="school-container">
+
+                <div class="school-image-wrapper">
+
+                    <img
+                        src="https://oxford.mydynamicerp.com/Attachments/appcms/3610233a-0ef8-4298-83ea-66e4d4dd950d.jpg"
+                        alt="Oxford Secondary School building in Butwal"
+                        class="school-image"
+                    >
+
+                </div>
+
+
+                <div class="school-content">
+
+                    <span class="school-tag">
+                        🎓 EDUCATION
+                    </span>
+
+                    <h3>
+                        Oxford Secondary School
+                    </h3>
+
+                    <p>
+                        I study at Oxford Secondary School in
+                        Butwal, Rupandehi, Nepal.
+                    </p>
+
+                    <p>
+                        School is an important part of my journey.
+                        It gives me opportunities to learn new subjects,
+                        meet teachers and friends, participate in
+                        activities and develop skills for the future.
+                    </p>
+
+
+                    <div class="school-details">
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                📍
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Location
+                                </strong>
+
+                                <p>
+                                    Butwal, Rupandehi, Nepal
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                💻
+                            </span>
+
+                            <div>
+                                <strong>
+                                    My Interest
+                                </strong>
+
+                                <p>
+                                    Technology & Coding
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BLOG SECTION
+        ========================== -->
+
+        <section id="blog" class="section blog-section">
+
+            <div class="section-title">
+
+                <p class="section-label">
+                    MY BLOG
+                </p>
+
+                <h2>
+                    Things I'm Learning
+                </h2>
+
+                <p>
+                    Posts about my experiences, projects and learning.
+                </p>
+
+            </div>
+
+
+            <div class="blog-grid">
+
+
+                <article class="blog-card">
+
+                    <div class="blog-number">
+                        01
+                    </div>
+
+                    <div class="blog-category">
+                        WEB DEVELOPMENT
+                    </div>
+
+                    <h3>
+                        My First Steps Into Web Development
+                    </h3>
+
+                    <p>
+                        Learning HTML was one of my first steps into
+                        creating websites. I learned how headings,
+                        paragraphs, images, links and sections work.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read Article →
+                    </a>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <div class="blog-number">
+                        02
+                    </div>
+
+                    <div class="blog-category">
+                        CSS
+                    </div>
+
+                    <h3>
+                        Making Websites Look Better
+                    </h3>
+
+                    <p>
+                        CSS completely changes the appearance of a
+                        website. I've been learning layouts, colors,
+                        spacing, animations and responsive design.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read Article →
+                    </a>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <div class="blog-number">
+                        03
+                    </div>
+
+                    <div class="blog-category">
+                        JOURNEY
+                    </div>
+
+                    <h3>
+                        Why I Want To Keep Learning Coding
+                    </h3>
+
+                    <p>
+                        Technology is constantly changing. My goal is
+                        to continue learning, build more projects and
+                        become better at solving problems with code.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read Article →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-text">
+
+                    <p class="section-label">
+                        CONTACT
+                    </p>
+
+                    <h2>
+                        Let's Connect
+                    </h2>
+
+                    <p>
+                        Have a question or want to talk about coding,
+                        websites or projects? You can contact me here.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email / Username
+                            </span>
+
+                            <strong>
+                                felizthereaper
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📱
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                Add a safe contact number
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Butwal, Nepal
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <span>&lt;/&gt;</span>
+                Feliz.
+
+            </div>
+
+            <p>
+                Built with HTML & CSS by Rezin
+            </p>
+
+            <p class="copyright">
+                © 2026 Feliz. All rights reserved.
+            </p>
+
         </div>
-    </nav>
 
-    <section id="home" class="hero">
-        <h1>Hello, I'm Rezin 👋</h1>
-        <p>I'm a student learning web development.</p>
-        <a class="button" href="#projects">View My Projects</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm learning HTML, CSS, JavaScript and Python.
-            I enjoy creating websites and learning new things.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>My first website.</p>
-        </div>
-
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>A simple JavaScript project.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your@email.com</p>
-    </section>
-
-    <footer>
-        <p>© 2026 Rezin. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
