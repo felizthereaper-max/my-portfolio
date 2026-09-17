@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+
+    <!-- =========================================
+         BASIC SETTINGS
+    ========================================== -->
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -13,34 +18,58 @@
     <meta name="author"
           content="Rezin Raskoti">
 
-    <title>Rezin Raskoti | Personal Blog</title>
+    <meta name="theme-color"
+          content="#05050a">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Rezin Raskoti | My Digital World</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800&display=swap"
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================
+         ⭐ THIS CONNECTS HTML TO CSS ⭐
+    ========================================== -->
+
+    <link rel="stylesheet"
+          href="./style.css">
+
 </head>
+
 
 <body>
 
+
     <!-- =========================================
-         BACKGROUND EFFECTS
+         BACKGROUND
     ========================================== -->
 
     <div class="background">
 
-        <div class="gradient-orb orb-one"></div>
-        <div class="gradient-orb orb-two"></div>
-        <div class="gradient-orb orb-three"></div>
+        <div class="grid"></div>
 
-        <div class="grid-background"></div>
+        <div class="orb orb-1"></div>
+
+        <div class="orb orb-2"></div>
+
+        <div class="orb orb-3"></div>
+
+        <div class="noise"></div>
 
     </div>
+
 
 
     <!-- =========================================
@@ -49,34 +78,59 @@
 
     <header class="navbar">
 
-        <div class="nav-container">
+        <div class="nav-inner">
 
-            <a href="#home" class="logo">
-                <span class="logo-bracket">&lt;</span>
+
+            <a href="#home"
+               class="logo">
+
+                <span>&lt;</span>
+
                 REZIN
-                <span class="logo-bracket">/&gt;</span>
+
+                <span>/&gt;</span>
+
             </a>
 
-            <nav class="nav-links">
 
-                <a href="#home">Home</a>
+            <nav class="navigation">
 
-                <a href="#about">About</a>
+                <a href="#home">
+                    Home
+                </a>
 
-                <a href="#journey">Journey</a>
+                <a href="#about">
+                    About
+                </a>
 
-                <a href="#skills">Skills</a>
+                <a href="#journey">
+                    Journey
+                </a>
 
-                <a href="#mentor">Mentor</a>
+                <a href="#skills">
+                    Skills
+                </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#mentor">
+                    Mentor
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
 
             </nav>
 
-            <a href="#contact" class="nav-button">
-                Let's Connect
+
+            <a href="#contact"
+               class="nav-contact">
+
+                Connect
+
                 <span>↗</span>
+
             </a>
+
 
         </div>
 
@@ -85,742 +139,861 @@
 
 
     <!-- =========================================
-         HERO SECTION
+         HERO
     ========================================== -->
 
     <main>
 
-        <section id="home" class="hero">
+        <section id="home"
+                 class="hero">
 
             <div class="hero-container">
 
-                <div class="hero-content">
 
-                    <div class="status-pill">
+                <!-- HERO TEXT -->
 
-                        <span class="status-dot"></span>
+                <div class="hero-text">
+
+
+                    <div class="available">
+
+                        <span class="live-dot"></span>
 
                         <span>
-                            Currently learning & building
+                            WELCOME TO MY DIGITAL WORLD
                         </span>
 
                     </div>
 
 
+                    <p class="small-intro">
+                        HELLO, I'M
+                    </p>
+
+
                     <h1>
 
-                        Hey, I'm
+                        REZIN
 
-                        <span class="gradient-text">
-                            Rezin
-                        </span>
-
-                        <br>
-
-                        <span class="outline-text">
-                            Raskoti.
+                        <span class="gradient">
+                            RASKOTI
                         </span>
 
                     </h1>
 
 
+                    <div class="typing-line">
+
+                        <span class="code-symbol">
+                            &lt;
+                        </span>
+
+                        <span>
+                            Student • Creator • Learner
+                        </span>
+
+                        <span class="code-symbol">
+                            /&gt;
+                        </span>
+
+                    </div>
+
+
                     <p class="hero-description">
 
-                        Welcome to my little corner of the internet.
-                        I'm a student, learner, creator and someone who
-                        loves exploring the world of technology and coding.
+                        Welcome to my personal blog.
+                        This is where I share my journey through
+                        coding, technology, creativity, learning
+                        and the things that inspire me.
 
                     </p>
 
 
                     <div class="hero-buttons">
 
-                        <a href="#about" class="primary-button">
 
-                            Explore My Journey
+                        <a href="#about"
+                           class="button primary">
+
+                            Explore My World
 
                             <span>↓</span>
 
                         </a>
 
 
-                        <a href="#mentor" class="secondary-button">
+                        <a href="#journey"
+                           class="button secondary">
 
-                            Meet My Mentor
+                            My Journey
 
-                            <span>↗</span>
+                            <span>→</span>
 
                         </a>
 
-                    </div>
-
-
-                    <!-- Quick stats -->
-
-                    <div class="quick-stats">
-
-                        <div class="stat">
-
-                            <strong>01</strong>
-
-                            <span>
-                                Student
-                            </span>
-
-                        </div>
-
-
-                        <div class="stat-line"></div>
-
-
-                        <div class="stat">
-
-                            <strong>∞</strong>
-
-                            <span>
-                                Curiosity
-                            </span>
-
-                        </div>
-
-
-                        <div class="stat-line"></div>
-
-
-                        <div class="stat">
-
-                            <strong>24/7</strong>
-
-                            <span>
-                                Learning
-                            </span>
-
-                        </div>
 
                     </div>
+
+
+                    <div class="hero-stats">
+
+
+                        <div class="stat">
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <span>
+                                STUDENT
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-separator"></div>
+
+
+                        <div class="stat">
+
+                            <strong>
+                                ∞
+                            </strong>
+
+                            <span>
+                                CURIOSITY
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-separator"></div>
+
+
+                        <div class="stat">
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                LEARNING
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
 
 
 
-                <!-- Hero visual -->
+                <!-- =================================
+                     HERO IMAGE
+                ================================== -->
 
                 <div class="hero-visual">
 
-                    <div class="orbit orbit-one"></div>
 
-                    <div class="orbit orbit-two"></div>
+                    <div class="circle circle-one"></div>
 
+                    <div class="circle circle-two"></div>
 
-                    <div class="profile-wrapper">
-
-                        <div class="profile-glow"></div>
-
-                        <div class="profile-ring">
-
-                            <div class="profile-image">
-
-                                <img src="profile.jpg"
-                                     alt="Rezin Raskoti">
-
-                            </div>
-
-                        </div>
+                    <div class="circle circle-three"></div>
 
 
-                        <div class="floating-card card-top">
-
-                            <span class="card-icon">
-                                &lt;/&gt;
-                            </span>
-
-                            <div>
-                                <small>Currently</small>
-                                <strong>Coding</strong>
-                            </div>
-
-                        </div>
+                    <div class="image-glow"></div>
 
 
-                        <div class="floating-card card-bottom">
+                    <div class="profile-frame">
 
-                            <span class="card-icon">
-                                ✦
-                            </span>
 
-                            <div>
-                                <small>Mindset</small>
-                                <strong>Keep Learning</strong>
-                            </div>
+                        <!-- ⭐ YOUR IMAGE ⭐ -->
+
+                        <img src="./download(3).jpg"
+                             alt="Rezin Raskoti">
+
+
+                    </div>
+
+
+                    <!-- FLOATING CARD -->
+
+                    <div class="floating-card floating-one">
+
+                        <span class="floating-icon">
+                            &lt;/&gt;
+                        </span>
+
+                        <div>
+
+                            <small>
+                                STATUS
+                            </small>
+
+                            <strong>
+                                BUILDING
+                            </strong>
 
                         </div>
 
                     </div>
+
+
+                    <div class="floating-card floating-two">
+
+                        <span class="floating-icon">
+                            ✦
+                        </span>
+
+                        <div>
+
+                            <small>
+                                MINDSET
+                            </small>
+
+                            <strong>
+                                KEEP GOING
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-three">
+
+                        <span class="floating-icon">
+                            ∞
+                        </span>
+
+                        <div>
+
+                            <small>
+                                LEARNING
+                            </small>
+
+                            <strong>
+                                EVERY DAY
+                            </strong>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
 
-            <!-- Scroll indicator -->
+            <div class="scroll">
 
-            <div class="scroll-indicator">
-
-                <span>SCROLL TO EXPLORE</span>
+                <span>
+                    SCROLL
+                </span>
 
                 <div class="scroll-line"></div>
 
             </div>
 
-        </section>
-
-
-
-        <!-- =========================================
-             ABOUT SECTION
-        ========================================== -->
-
-        <section id="about" class="section about-section">
-
-            <div class="section-container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        01
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            GET TO KNOW ME
-                        </span>
-
-                        <h2>
-                            A little
-                            <span>about me.</span>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-main glass-card">
-
-                        <div class="quote-mark">
-                            “
-                        </div>
-
-                        <h3>
-                            Curiosity is where
-                            everything begins.
-                        </h3>
-
-                        <p>
-
-                            My name is <strong>Rezin Raskoti</strong>.
-                            I'm a student who enjoys discovering new
-                            things, experimenting with technology and
-                            learning how websites and digital experiences
-                            are created.
-
-                        </p>
-
-                        <p>
-
-                            My coding journey is about more than simply
-                            writing lines of code. I want to understand
-                            how things work, build interesting projects,
-                            solve problems and continuously improve.
-
-                        </p>
-
-                        <div class="signature">
-
-                            <span>
-                                Rezin
-                            </span>
-
-                            <small>
-                                — always learning
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="about-cards">
-
-                        <div class="mini-card glass-card">
-
-                            <div class="mini-icon">
-                                ◈
-                            </div>
-
-                            <h4>
-                                Student
-                            </h4>
-
-                            <p>
-                                Learning, experimenting
-                                and building every day.
-                            </p>
-
-                        </div>
-
-
-                        <div class="mini-card glass-card">
-
-                            <div class="mini-icon">
-                                &lt;/&gt;
-                            </div>
-
-                            <h4>
-                                Developer
-                            </h4>
-
-                            <p>
-                                Exploring HTML, CSS,
-                                JavaScript and web design.
-                            </p>
-
-                        </div>
-
-
-                        <div class="mini-card glass-card">
-
-                            <div class="mini-icon">
-                                ✦
-                            </div>
-
-                            <h4>
-                                Creator
-                            </h4>
-
-                            <p>
-                                Turning ideas into
-                                digital experiences.
-                            </p>
-
-                        </div>
-
-
-                        <div class="mini-card glass-card">
-
-                            <div class="mini-icon">
-                                ∞
-                            </div>
-
-                            <h4>
-                                Learner
-                            </h4>
-
-                            <p>
-                                Always curious about
-                                what comes next.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </section>
 
 
 
         <!-- =========================================
-             JOURNEY SECTION
+             ABOUT
         ========================================== -->
 
-        <section id="journey" class="section journey-section">
+        <section id="about"
+                 class="section">
 
-            <div class="section-container">
 
-                <div class="section-heading">
+            <div class="section-title">
 
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            MY JOURNEY
-                        </span>
-
-                        <h2>
-                            Learning
-                            <span>one step at a time.</span>
-                        </h2>
-
-                    </div>
-
+                <div class="section-number">
+                    01
                 </div>
 
+                <div>
 
-                <div class="timeline">
-
-                    <div class="timeline-line"></div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-                            01
-                        </div>
-
-                        <div class="timeline-content glass-card">
-
-                            <span class="timeline-tag">
-                                START
-                            </span>
-
-                            <h3>
-                                Discovering Technology
-                            </h3>
-
-                            <p>
-
-                                My interest in technology started
-                                with curiosity about how websites,
-                                applications and digital tools work.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-                            02
-                        </div>
-
-                        <div class="timeline-content glass-card">
-
-                            <span class="timeline-tag">
-                                LEARN
-                            </span>
-
-                            <h3>
-                                Entering the World of Code
-                            </h3>
-
-                            <p>
-
-                                I began learning the fundamentals
-                                of web development and discovered
-                                how HTML and CSS can transform
-                                ideas into real interfaces.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-                            03
-                        </div>
-
-                        <div class="timeline-content glass-card">
-
-                            <span class="timeline-tag">
-                                BUILD
-                            </span>
-
-                            <h3>
-                                Creating My Own Projects
-                            </h3>
-
-                            <p>
-
-                                Instead of only studying theory,
-                                I started building websites and
-                                experimenting with animations,
-                                layouts and interactive designs.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-                            04
-                        </div>
-
-                        <div class="timeline-content glass-card">
-
-                            <span class="timeline-tag">
-                                NEXT
-                            </span>
-
-                            <h3>
-                                What's Coming Next?
-                            </h3>
-
-                            <p>
-
-                                My journey is still beginning.
-                                There are new technologies,
-                                frameworks and projects waiting
-                                to be explored.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             SKILLS SECTION
-        ========================================== -->
-
-        <section id="skills" class="section skills-section">
-
-            <div class="section-container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            WHAT I'M EXPLORING
-                        </span>
-
-                        <h2>
-                            My coding
-                            <span>toolbox.</span>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-                    <div class="skill-card glass-card">
-
-                        <div class="skill-header">
-
-                            <span class="skill-number">
-                                01
-                            </span>
-
-                            <span class="skill-symbol">
-                                HTML
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            HTML5
-                        </h3>
-
-                        <p>
-                            Building structured and semantic
-                            web pages.
-                        </p>
-
-                        <div class="progress">
-
-                            <div class="progress-bar html-progress">
-                            </div>
-
-                        </div>
-
-                        <span class="skill-label">
-                            Structure
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-card glass-card">
-
-                        <div class="skill-header">
-
-                            <span class="skill-number">
-                                02
-                            </span>
-
-                            <span class="skill-symbol">
-                                CSS
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            CSS3
-                        </h3>
-
-                        <p>
-                            Creating modern layouts,
-                            animations and visual effects.
-                        </p>
-
-                        <div class="progress">
-
-                            <div class="progress-bar css-progress">
-                            </div>
-
-                        </div>
-
-                        <span class="skill-label">
-                            Design
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-card glass-card">
-
-                        <div class="skill-header">
-
-                            <span class="skill-number">
-                                03
-                            </span>
-
-                            <span class="skill-symbol">
-                                JS
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
-                        <p>
-                            Exploring logic, interaction
-                            and dynamic websites.
-                        </p>
-
-                        <div class="progress">
-
-                            <div class="progress-bar js-progress">
-                            </div>
-
-                        </div>
-
-                        <span class="skill-label">
-                            Interaction
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-card glass-card">
-
-                        <div class="skill-header">
-
-                            <span class="skill-number">
-                                04
-                            </span>
-
-                            <span class="skill-symbol">
-                                WEB
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            Web Design
-                        </h3>
-
-                        <p>
-                            Combining code and creativity
-                            into digital experiences.
-                        </p>
-
-                        <div class="progress">
-
-                            <div class="progress-bar design-progress">
-                            </div>
-
-                        </div>
-
-                        <span class="skill-label">
-                            Creativity
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             FEATURE SECTION
-        ========================================== -->
-
-        <section class="feature-section">
-
-            <div class="feature-container">
-
-                <div class="feature-text">
-
-                    <span class="eyebrow">
-                        THE DEVELOPER MINDSET
+                    <span>
+                        ABOUT ME
                     </span>
 
                     <h2>
-                        Don't just
-                        <span>use technology.</span>
-                        Understand it.
+
+                        Behind the
+
+                        <em>
+                            code.
+                        </em>
+
                     </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <article class="about-card large-card">
+
+
+                    <div class="card-decoration">
+                        ✦
+                    </div>
+
+
+                    <span class="label">
+                        MY STORY
+                    </span>
+
+
+                    <h3>
+                        Curiosity turned
+                        into creativity.
+                    </h3>
+
 
                     <p>
 
-                        Every project is an opportunity to learn
-                        something new. I believe mistakes are part
-                        of the process and every bug can teach
-                        something useful.
+                        I'm Rezin Raskoti, a student who enjoys
+                        exploring technology and discovering
+                        how digital things are built.
+
+                    </p>
+
+
+                    <p>
+
+                        Coding gives me a way to turn ideas into
+                        something real. Every project gives me
+                        another opportunity to experiment,
+                        learn and improve.
+
+                    </p>
+
+
+                    <div class="signature">
+
+                        <span>
+                            Rezin
+                        </span>
+
+                        <small>
+                            Always learning.
+                        </small>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="about-card">
+
+
+                    <div class="icon">
+                        &lt;/&gt;
+                    </div>
+
+
+                    <h3>
+                        Coding
+                    </h3>
+
+
+                    <p>
+
+                        Exploring the world of HTML,
+                        CSS, JavaScript and web development.
+
+                    </p>
+
+
+                </article>
+
+
+
+                <article class="about-card">
+
+
+                    <div class="icon">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        Creativity
+                    </h3>
+
+
+                    <p>
+
+                        Designing interfaces and turning
+                        ideas into visual experiences.
+
+                    </p>
+
+
+                </article>
+
+
+
+                <article class="about-card">
+
+
+                    <div class="icon">
+                        ◈
+                    </div>
+
+
+                    <h3>
+                        Technology
+                    </h3>
+
+
+                    <p>
+
+                        Learning how modern technology works
+                        and experimenting with new tools.
+
+                    </p>
+
+
+                </article>
+
+
+
+                <article class="about-card">
+
+
+                    <div class="icon">
+                        ∞
+                    </div>
+
+
+                    <h3>
+                        Growth
+                    </h3>
+
+
+                    <p>
+
+                        Improving through practice,
+                        mistakes and new challenges.
+
+                    </p>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             JOURNEY
+        ========================================== -->
+
+        <section id="journey"
+                 class="section dark-section">
+
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <div>
+
+                    <span>
+                        MY JOURNEY
+                    </span>
+
+                    <h2>
+
+                        From curiosity
+
+                        <em>
+                            to code.
+                        </em>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-line"></div>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-number">
+                        01
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            BEGINNING
+                        </span>
+
+                        <h3>
+                            Discovering Technology
+                        </h3>
+
+                        <p>
+
+                            It all started with curiosity.
+                            I wanted to understand how websites,
+                            computers and digital experiences
+                            actually worked.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-number">
+                        02
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            LEARNING
+                        </span>
+
+                        <h3>
+                            Learning Web Development
+                        </h3>
+
+                        <p>
+
+                            I started exploring HTML and CSS
+                            and learned how structure, design,
+                            animations and layouts work together.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-number">
+                        03
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            BUILDING
+                        </span>
+
+                        <h3>
+                            Creating Websites
+                        </h3>
+
+                        <p>
+
+                            Instead of only learning theory,
+                            I began creating websites and
+                            experimenting with different
+                            designs and effects.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-number">
+                        04
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            FUTURE
+                        </span>
+
+                        <h3>
+                            The Journey Continues
+                        </h3>
+
+                        <p>
+
+                            There is still a huge amount
+                            to learn. My goal is to continue
+                            experimenting, building and
+                            improving.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SKILLS
+        ========================================== -->
+
+        <section id="skills"
+                 class="section">
+
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div>
+
+                    <span>
+                        MY TOOLBOX
+                    </span>
+
+                    <h2>
+
+                        Things I'm
+
+                        <em>
+                            learning.
+                        </em>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skills">
+
+
+                <article class="skill">
+
+                    <div class="skill-top">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            HTML5
+                        </strong>
+
+                    </div>
+
+                    <div class="skill-icon">
+                        HTML
+                    </div>
+
+                    <p>
+                        Semantic structure and
+                        modern web pages.
+                    </p>
+
+                    <div class="progress">
+
+                        <span class="progress-html"></span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill">
+
+                    <div class="skill-top">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            CSS3
+                        </strong>
+
+                    </div>
+
+                    <div class="skill-icon">
+                        CSS
+                    </div>
+
+                    <p>
+                        Design, responsive layouts,
+                        animations and effects.
+                    </p>
+
+                    <div class="progress">
+
+                        <span class="progress-css"></span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill">
+
+                    <div class="skill-top">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            JAVASCRIPT
+                        </strong>
+
+                    </div>
+
+                    <div class="skill-icon">
+                        JS
+                    </div>
+
+                    <p>
+                        Exploring logic and interactive
+                        web experiences.
+                    </p>
+
+                    <div class="progress">
+
+                        <span class="progress-js"></span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill">
+
+                    <div class="skill-top">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+                            DESIGN
+                        </strong>
+
+                    </div>
+
+                    <div class="skill-icon">
+                        UI
+                    </div>
+
+                    <p>
+                        Combining creativity,
+                        usability and visual design.
+                    </p>
+
+                    <div class="progress">
+
+                        <span class="progress-design"></span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CODE SECTION
+        ========================================== -->
+
+        <section class="code-section">
+
+
+            <div class="code-container">
+
+
+                <div class="code-text">
+
+                    <span class="label">
+                        DEVELOPER MINDSET
+                    </span>
+
+
+                    <h2>
+
+                        I don't just want
+
+                        <span>
+                            to use technology.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        I want to understand it,
+                        experiment with it and create
+                        things with it.
 
                     </p>
 
                 </div>
 
 
-                <div class="code-window">
 
-                    <div class="window-header">
+                <div class="terminal">
 
-                        <div class="window-dots">
+
+                    <div class="terminal-header">
+
+                        <div class="dots">
 
                             <span></span>
                             <span></span>
@@ -835,9 +1008,9 @@
                     </div>
 
 
-                    <div class="code-content">
+                    <div class="terminal-body">
 
-<pre><code><span class="purple">const</span> developer = {
+<pre><code><span class="purple">const</span> rezin = {
 
     name:
         <span class="green">"Rezin Raskoti"</span>,
@@ -848,20 +1021,23 @@
     curiosity:
         <span class="orange">Infinity</span>,
 
-    goal:
-        <span class="green">"Build Something Amazing"</span>,
+    creativity:
+        <span class="green">true</span>,
 
-    status:
-        <span class="green">"Learning..."</span>
+    goal:
+        <span class="green">"Build Something Amazing"</span>
+
 };
 
-<span class="blue">while</span> (developer.curiosity) {
 
-    developer.learn();
+<span class="blue">while</span> (rezin.curiosity) {
 
-    developer.build();
+    rezin.learn();
 
-    developer.improve();
+    rezin.create();
+
+    rezin.improve();
+
 }</code></pre>
 
                     </div>
@@ -875,89 +1051,178 @@
 
 
         <!-- =========================================
-             MENTOR SECTION
+             MENTOR
         ========================================== -->
 
-        <section id="mentor" class="section mentor-section">
+        <section id="mentor"
+                 class="section">
 
-            <div class="section-container">
 
-                <div class="section-heading">
+            <div class="section-title">
 
-                    <span class="section-number">
+                <div class="section-number">
+                    04
+                </div>
+
+                <div>
+
+                    <span>
+                        MY MENTOR
+                    </span>
+
+                    <h2>
+
+                        Learning with
+
+                        <em>
+                            guidance.
+                        </em>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <article class="mentor">
+
+
+                <div class="mentor-image">
+
+
+                    <!-- Same uploaded image -->
+
+                    <img src="./download(3).jpg"
+                         alt="Bibek Bhusal Sir">
+
+
+                </div>
+
+
+
+                <div class="mentor-info">
+
+                    <span class="label">
+                        MENTOR / TEACHER
+                    </span>
+
+
+                    <h3>
+                        Bibek Bhusal Sir
+                    </h3>
+
+
+                    <p>
+
+                        My mentor has helped me explore
+                        coding and technology and encouraged
+                        me to learn, experiment and build.
+
+                    </p>
+
+
+                    <div class="mentor-quote">
+
+                        <span>
+                            “
+                        </span>
+
+                        <p>
+                            Learning becomes more exciting
+                            when you have someone to guide you.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =========================================
+             VALUES
+        ========================================== -->
+
+        <section class="values-section">
+
+
+            <div class="values-container">
+
+
+                <article>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Curiosity
+                    </h3>
+
+                    <p>
+                        Ask questions and explore.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Creativity
+                    </h3>
+
+                    <p>
+                        Turn ideas into experiences.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Consistency
+                    </h3>
+
+                    <p>
+                        Keep improving every day.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
                         04
                     </span>
 
-                    <div>
+                    <h3>
+                        Growth
+                    </h3>
 
-                        <span class="eyebrow">
-                            MY MENTOR
-                        </span>
+                    <p>
+                        Learn from every experience.
+                    </p>
 
-                        <h2>
-                            Someone who
-                            <span>helped me learn.</span>
-                        </h2>
+                </article>
 
-                    </div>
-
-                </div>
-
-
-                <div class="mentor-card glass-card">
-
-                    <div class="mentor-image-container">
-
-                        <div class="mentor-image-glow"></div>
-
-                        <div class="mentor-image">
-
-                            <img src="profile.jpg"
-                                 alt="Bibek Bhusal Sir">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="mentor-info">
-
-                        <span class="mentor-label">
-                            MENTOR / TEACHER
-                        </span>
-
-                        <h3>
-                            Bibek Bhusal Sir
-                        </h3>
-
-                        <p>
-
-                            A mentor who has helped me explore
-                            coding and technology. Learning from
-                            someone who can guide you, explain
-                            difficult concepts and encourage you
-                            to keep experimenting can make the
-                            journey much more interesting.
-
-                        </p>
-
-
-                        <div class="mentor-quote">
-
-                            <span class="quote-icon">
-                                “
-                            </span>
-
-                            <p>
-                                Keep learning. Keep experimenting.
-                                Keep building.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
 
             </div>
 
@@ -966,190 +1231,107 @@
 
 
         <!-- =========================================
-             VALUES SECTION
+             CONTACT
         ========================================== -->
 
-        <section class="section values-section">
+        <section id="contact"
+                 class="contact-section">
 
-            <div class="section-container">
 
-                <div class="values-grid">
+            <div class="contact-inner">
 
-                    <div class="value-card">
 
-                        <span>
-                            01
+                <span class="label">
+                    LET'S CONNECT
+                </span>
+
+
+                <h2>
+
+                    Let's build
+
+                    <span>
+                        something cool.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Thanks for visiting my personal blog.
+                    This is only the beginning of my journey.
+
+                </p>
+
+
+                <div class="contact-information">
+
+
+                    <a href="tel:9847219772"
+                       class="contact-box">
+
+                        <span class="contact-icon">
+                            ☎
                         </span>
 
-                        <h3>
-                            Curiosity
-                        </h3>
+                        <div>
 
-                        <p>
-                            Ask questions. Explore ideas.
-                            Never stop wondering how things work.
-                        </p>
+                            <small>
+                                PHONE
+                            </small>
 
-                    </div>
-
-
-                    <div class="value-card">
-
-                        <span>
-                            02
-                        </span>
-
-                        <h3>
-                            Creativity
-                        </h3>
-
-                        <p>
-                            Turn simple ideas into something
-                            unique and meaningful.
-                        </p>
-
-                    </div>
-
-
-                    <div class="value-card">
-
-                        <span>
-                            03
-                        </span>
-
-                        <h3>
-                            Consistency
-                        </h3>
-
-                        <p>
-                            Small progress every day can
-                            eventually create something huge.
-                        </p>
-
-                    </div>
-
-
-                    <div class="value-card">
-
-                        <span>
-                            04
-                        </span>
-
-                        <h3>
-                            Growth
-                        </h3>
-
-                        <p>
-                            Learn from mistakes and improve
-                            with every project.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             CONTACT SECTION
-        ========================================== -->
-
-        <section id="contact" class="section contact-section">
-
-            <div class="section-container">
-
-                <div class="contact-card">
-
-                    <div class="contact-decoration decoration-one"></div>
-                    <div class="contact-decoration decoration-two"></div>
-
-
-                    <div class="contact-content">
-
-                        <span class="eyebrow">
-                            HAVE AN IDEA?
-                        </span>
-
-                        <h2>
-                            Let's create
-                            <span>something cool.</span>
-                        </h2>
-
-                        <p>
-
-                            Whether you're interested in coding,
-                            technology, websites or just want to
-                            connect, feel free to reach out.
-
-                        </p>
-
-
-                        <div class="contact-details">
-
-                            <div class="contact-item">
-
-                                <span class="contact-icon">
-                                    ☎
-                                </span>
-
-                                <div>
-
-                                    <small>
-                                        PHONE
-                                    </small>
-
-                                    <strong>
-                                        9847219772
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="contact-item">
-
-                                <span class="contact-icon">
-                                    @
-                                </span>
-
-                                <div>
-
-                                    <small>
-                                        EMAIL
-                                    </small>
-
-                                    <strong>
-                                        felizthereaper
-                                    </strong>
-
-                                </div>
-
-                            </div>
+                            <strong>
+                                9847219772
+                            </strong>
 
                         </div>
 
+                    </a>
 
-                        <a href="#home"
-                           class="primary-button contact-button">
 
-                            Back To Top
 
-                            <span>↑</span>
+                    <a href="mailto:felizthereaper"
+                       class="contact-box">
 
-                        </a>
+                        <span class="contact-icon">
+                            @
+                        </span>
 
-                    </div>
+                        <div>
+
+                            <small>
+                                EMAIL
+                            </small>
+
+                            <strong>
+                                felizthereaper
+                            </strong>
+
+                        </div>
+
+                    </a>
+
 
                 </div>
+
+
+                <a href="#home"
+                   class="button primary">
+
+                    Back To Top
+
+                    <span>
+                        ↑
+                    </span>
+
+                </a>
+
 
             </div>
 
         </section>
+
 
     </main>
 
@@ -1161,30 +1343,30 @@
 
     <footer>
 
-        <div class="footer-container">
 
-            <div class="footer-logo">
+        <div class="footer-logo">
 
-                <span>&lt;</span>
-                REZIN
-                <span>/&gt;</span>
+            <span>&lt;</span>
 
-            </div>
+            REZIN
 
-
-            <p>
-                Designed & built by Rezin Raskoti.
-            </p>
-
-
-            <div class="footer-line"></div>
-
-
-            <p class="copyright">
-                © 2026 Rezin Raskoti • Keep learning.
-            </p>
+            <span>/&gt;</span>
 
         </div>
+
+
+        <p>
+            Designed & built by Rezin Raskoti.
+        </p>
+
+
+        <div class="footer-line"></div>
+
+
+        <p class="copyright">
+            © 2026 Rezin Raskoti • Keep learning • Keep building.
+        </p>
+
 
     </footer>
 
