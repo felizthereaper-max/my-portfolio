@@ -1,14 +1,26 @@
-```javascript
-const video = document.querySelector(".luffy-video");
+const video = document.getElementById("luffyVideo");
 
-// Try to start the video automatically
-video.play().catch(() => {
-    console.log("Autoplay was blocked by the browser.");
+/*
+    CHANGE THESE TWO NUMBERS
+    to choose the part of the Luffy video you want.
+*/
+
+const START_TIME = 5;
+const END_TIME = 15;
+
+video.addEventListener("loadedmetadata", () => {
+    video.currentTime = START_TIME;
+
+    video.play().catch(() => {
+        console.log("Video autoplay waiting for browser permission.");
+    });
 });
 
-// Restart automatically if the video ends
-video.addEventListener("ended", () => {
-    video.currentTime = 0;
-    video.play();
+video.addEventListener("timeupdate", () => {
+
+    if (video.currentTime >= END_TIME) {
+        video.currentTime = START_TIME;
+        video.play();
+    }
+
 });
-```
