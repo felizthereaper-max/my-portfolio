@@ -1,1 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Begin Here</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
+  <body>
+    <!-- Canvas background -->
+    <canvas id="bg"></canvas>
+
+    <!-- Intro film -->
+    <div class="film" aria-hidden="true">
+      <video
+        id="introVideo"
+        muted
+        playsinline
+        preload="auto"
+        loop
+        webkit-playsinline
+      >
+        <!-- Put your file here -->
+        <!-- Create: public/video/intro.mp4 (or change this path) -->
+        <source src="./video/intro.mp4" type="video/mp4" />
+      </video>
+
+      <div class="film-overlay"></div>
+
+      <div class="film-ui">
+        <div class="brand">
+          <div class="brand-line">Yug</div>
+          <div class="brand-line">Sunar</div>
+        </div>
+
+        <div class="scroll-hint">
+          <span class="scroll-text">scroll</span>
+          <span class="scroll-arrow" aria-hidden="true"></span>
+        </div>
+
+        <button class="skip-btn" id="skipBtn" type="button">
+          Skip Intro
+        </button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <main class="page" id="page">
+      <section class="section hero">
+        <div class="content">
+          <h1>Begin Here</h1>
+          <p>
+            Emulator tooling · PC optimization · Web design
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>ABOUT ME</h2>
+          <p>
+            I'm an emulator developer, a PC optimizer and a tech enthusiast from
+            Nepal. I build tools that make Android emulators faster, cleaner and
+            easier to use, tune Windows machines for maximum performance.
+          </p>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div class="card">
+          <h2>What I like</h2>
+          <ul class="list">
+            <li>Squeezing every FPS out of emulators</li>
+            <li>Clean, debloated Windows setups</li>
+            <li>Testing performance mods</li>
+            <li>Cinematic UI & motion design</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>What I'm doing</h2>
+          <ul class="list">
+            <li>Optimizing PCs for maximum performance</li>
+            <li>Creating content for YouTube</li>
+            <li>Growing the Discord community</li>
+            <li>Designing this website</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>TOOLS & PROJECTS</h2>
+          <div class="grid">
+            <article class="tile">
+              <h3>Z-Lag OS</h3>
+              <p>A Windows optimization playbook built together with my team.</p>
+              <span class="tag">Available</span>
+            </article>
+
+            <article class="tile">
+              <h3>PC Optimization Pack</h3>
+              <p>Free bundle to clean up and speed up your Windows machine.</p>
+              <span class="tag">Free</span>
+            </article>
+
+            <article class="tile">
+              <h3>YUX FF Site</h3>
+              <p>Cinematic intro film, particle transitions and a custom canvas engine.</p>
+              <span class="tag">Web</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Made with performance in mind.</p>
+      </footer>
+    </main>
+
+    <script src="./style.js"></script>
+  </body>
+</html>
