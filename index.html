@@ -1,1224 +1,450 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey D. Luffy | Future Pirate King</title>
 
-<meta name="description"
-      content="Personal portfolio and learning blog of Rezin Raskoti, a student from Oxford School, Butwal, Nepal.">
+    <link rel="stylesheet" href="style.css">
 
-<meta name="author" content="Rezin Raskoti">
-
-<meta name="keywords"
-      content="Rezin Raskoti, portfolio, student, HTML, CSS, coding, Oxford School, Butwal, Nepal">
-
-<title>Rezin Raskoti | Student Portfolio & Coding Blog</title>
-```
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-```
-<!-- =========================================================
-     HEADER
-========================================================== -->
-
-<header id="top">
-
-    <div>
-        <h1>REZIN RASKOTI</h1>
-
-        <p>
-            <strong>Student • Beginner Developer • Creator • Learner</strong>
-        </p>
-
-        <p>
-            Welcome to my personal portfolio and learning blog.
-        </p>
+    <!-- LOADING SCREEN -->
+    <div class="loader">
+        <div class="loader-text">MONKEY D. LUFFY</div>
+        <div class="loader-line"></div>
     </div>
 
-    <nav aria-label="Main Navigation">
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#mentor">My Mentor</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#learning">What I Learn</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#goals">Goals</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">LUFFY<span>.</span></div>
 
-    </nav>
-
-</header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#powers">Powers</a>
+            <a href="#crew">Crew</a>
+            <a href="#dream">Dream</a>
+        </nav>
+    </header>
 
 
-<main>
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-    <!-- =====================================================
-         HERO / HOME
-    ====================================================== -->
+        <!-- YOUR UPLOADED VIDEO -->
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source
+                src="Monkey D. Luffy Manga Animation _ Twixtor Clips _ One Piece.mp4"
+                type="video/mp4"
+            >
+        </video>
 
-    <section id="home">
+        <div class="video-overlay"></div>
 
-        <h2>Welcome to My Portfolio</h2>
+        <div class="hero-content">
 
-        <p>
-            Hello! My name is <strong>Rezin Raskoti</strong>.
-            I am a student from Butwal, Nepal, and this is my personal
-            website where I share information about myself, my education,
-            my coding journey, my projects, my mentor, and my future goals.
-        </p>
+            <p class="small-title">THE FUTURE PIRATE KING</p>
 
-        <p>
-            I am interested in technology, websites, coding, computers,
-            creativity, football, games, and learning new things.
-            I enjoy experimenting with HTML and building websites from scratch.
-        </p>
+            <h1>
+                MONKEY D.
+                <span>LUFFY</span>
+            </h1>
 
-        <p>
-            This website represents my journey as a student and beginner
-            web developer.
-        </p>
+            <p class="hero-description">
+                The man who will become the Pirate King.
+                A dreamer, a captain, and the one who never gives up.
+            </p>
 
-        <p>
-            <a href="#about">Explore My Story</a>
-            |
-            <a href="#projects">View My Projects</a>
-        </p>
+            <a href="#about" class="explore-btn">
+                EXPLORE HIS STORY
+                <span>↓</span>
+            </a>
+
+        </div>
+
+        <div class="scroll-down">
+            SCROLL
+            <div></div>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         QUICK INFORMATION
-    ====================================================== -->
+    <!-- INTRO -->
+    <section class="intro" id="about">
 
-    <section>
+        <div class="intro-number">01</div>
 
-        <h2>Quick Information</h2>
+        <div class="intro-text reveal">
 
-        <table border="1">
+            <p class="section-label">THE CAPTAIN</p>
 
-            <tr>
-                <th>Full Name</th>
-                <td>Rezin Raskoti</td>
-            </tr>
+            <h2>
+                I'M GONNA BE
+                <span>THE PIRATE KING!</span>
+            </h2>
 
-            <tr>
-                <th>Age</th>
-                <td>14</td>
-            </tr>
+            <p>
+                Monkey D. Luffy is the captain of the Straw Hat Pirates.
+                His journey began with a simple dream — finding the legendary
+                One Piece and becoming the Pirate King.
+            </p>
 
-            <tr>
-                <th>School</th>
-                <td>Oxford School</td>
-            </tr>
+            <p>
+                No matter how powerful his enemies become, Luffy keeps moving
+                forward with his friends beside him.
+            </p>
 
-            <tr>
-                <th>Location</th>
-                <td>Butwal, Nepal</td>
-            </tr>
-
-            <tr>
-                <th>Country</th>
-                <td>Nepal</td>
-            </tr>
-
-            <tr>
-                <th>Role</th>
-                <td>Student & Beginner Web Developer</td>
-            </tr>
-
-            <tr>
-                <th>Main Interest</th>
-                <td>Technology and Web Development</td>
-            </tr>
-
-            <tr>
-                <th>Mentor</th>
-                <td>Bibek Bhusal Sir</td>
-            </tr>
-
-        </table>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         ABOUT ME
-    ====================================================== -->
+    <!-- LUFFY IMAGE / VIDEO -->
+    <section class="character-section">
 
-    <section id="about">
+        <div class="character-image">
 
-        <h2>About Me</h2>
-
-        <article>
-
-            <h3>Who Am I?</h3>
-
-            <p>
-                My name is <strong>Rezin Raskoti</strong>. I am a student
-                studying at <strong>Oxford School in Butwal, Nepal</strong>.
-                I am interested in computers and technology, and I like
-                learning how websites and digital projects are created.
-            </p>
-
-            <p>
-                I started learning about web development because I wanted
-                to understand how websites work instead of only using them.
-                HTML was one of the first technologies that helped me
-                understand the structure of a webpage.
-            </p>
-
-            <p>
-                I enjoy creating pages, experimenting with different
-                elements, organizing content, and gradually improving my
-                coding skills.
-            </p>
-
-            <p>
-                I believe that learning programming is a process.
-                Sometimes the code works perfectly, and sometimes a small
-                mistake can cause a problem. Those mistakes are also part
-                of learning.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>My Interests</h3>
-
-            <ul>
-                <li>Web development</li>
-                <li>HTML and CSS</li>
-                <li>Computers and technology</li>
-                <li>Programming</li>
-                <li>Creating websites</li>
-                <li>Football</li>
-                <li>Gaming</li>
-                <li>Learning new skills</li>
-                <li>Creative projects</li>
-                <li>Exploring new ideas</li>
-            </ul>
-
-        </article>
-
-    </section>
-
-
-    <!-- =====================================================
-         EDUCATION
-    ====================================================== -->
-
-    <section id="education">
-
-        <h2>My Education</h2>
-
-        <article>
-
-            <h3>Oxford School</h3>
-
-            <p>
-                I study at <strong>Oxford School</strong> in
-                <strong>Butwal, Nepal</strong>.
-            </p>
-
-            <p>
-                School is an important part of my life because it helps me
-                develop knowledge, discipline, communication skills,
-                creativity, and problem-solving abilities.
-            </p>
-
-            <p>
-                Along with my regular school studies, I am interested in
-                learning technology and coding.
-            </p>
-
-        </article>
-
-
-        <h3>Things I Want to Improve</h3>
-
-        <ol>
-            <li>Improve my programming knowledge.</li>
-            <li>Understand HTML properly.</li>
-            <li>Learn CSS and website design.</li>
-            <li>Learn JavaScript.</li>
-            <li>Build better websites.</li>
-            <li>Improve problem-solving skills.</li>
-            <li>Learn how websites are deployed online.</li>
-            <li>Build useful personal projects.</li>
-        </ol>
-
-    </section>
-
-
-    <!-- =====================================================
-         MENTOR
-    ====================================================== -->
-
-    <section id="mentor">
-
-        <h2>My Mentor</h2>
-
-        <article>
-
-            <h3>Bibek Bhusal Sir</h3>
-
-            <!--
-                IMPORTANT:
-                Rename your mentor's image to:
-                bibek-bhusal.jpg
-
-                Then place it in the SAME folder as this HTML file.
-            -->
-
-            <figure>
-
-                <img
-                    src="bibek-bhusal.jpg"
-                    alt="Photo of my mentor Bibek Bhusal Sir"
-                    width="300"
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source
+                    src="Monkey D. Luffy Manga Animation _ Twixtor Clips _ One Piece.mp4"
+                    type="video/mp4"
                 >
+            </video>
 
-                <figcaption>
-                    Bibek Bhusal Sir — My Mentor
-                </figcaption>
+            <div class="image-glow"></div>
 
-            </figure>
+        </div>
 
-            <p>
-                <strong>Bibek Bhusal Sir</strong> is my mentor and one of
-                the people who has helped me learn about technology and
-                web development.
-            </p>
+        <div class="character-text reveal">
 
-            <p>
-                He taught me different concepts and helped me understand
-                how to approach coding and website creation.
-            </p>
+            <p class="section-label">MONKEY D. LUFFY</p>
+
+            <h2>
+                FREEDOM
+                <span>IS EVERYTHING.</span>
+            </h2>
 
             <p>
-                Learning from a mentor makes it easier to understand new
-                concepts because I can ask questions, practice what I
-                learn, and improve through feedback.
+                Luffy doesn't want to rule the world.
+                He wants to be the freest person on the sea.
             </p>
 
-            <p>
-                I am thankful for the guidance and knowledge that my mentor
-                has shared with me.
-            </p>
+            <div class="stats">
 
-        </article>
+                <div>
+                    <strong>01</strong>
+                    <small>CAPTAIN</small>
+                </div>
 
+                <div>
+                    <strong>∞</strong>
+                    <small>WILLPOWER</small>
+                </div>
 
-        <blockquote>
-            Learning something new every day can eventually turn small
-            skills into something big.
-        </blockquote>
+                <div>
+                    <strong>∞</strong>
+                    <small>ADVENTURE</small>
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         SKILLS
-    ====================================================== -->
+    <!-- POWERS -->
+    <section class="powers" id="powers">
 
-    <section id="skills">
+        <div class="section-heading reveal">
 
-        <h2>My Skills</h2>
+            <p class="section-label">02 — ABILITIES</p>
 
-        <p>
-            I am currently developing my skills and learning more about
-            web development.
-        </p>
+            <h2>
+                THE POWER
+                <span>OF FREEDOM</span>
+            </h2>
 
-        <table border="1">
+        </div>
 
-            <thead>
-                <tr>
-                    <th>Skill</th>
-                    <th>What I Know</th>
-                    <th>My Goal</th>
-                </tr>
-            </thead>
 
-            <tbody>
+        <div class="power-grid">
 
-                <tr>
-                    <td>HTML</td>
-                    <td>Basic webpage structure and elements</td>
-                    <td>Become advanced</td>
-                </tr>
+            <div class="power-card reveal">
+                <div class="card-number">01</div>
 
-                <tr>
-                    <td>CSS</td>
-                    <td>Learning website styling</td>
-                    <td>Create professional designs</td>
-                </tr>
-
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Beginning to understand programming concepts</td>
-                    <td>Create interactive websites</td>
-                </tr>
-
-                <tr>
-                    <td>Problem Solving</td>
-                    <td>Learning through coding problems</td>
-                    <td>Become better at logical thinking</td>
-                </tr>
-
-                <tr>
-                    <td>Web Design</td>
-                    <td>Learning page structure and layouts</td>
-                    <td>Build complete websites</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </section>
-
-
-    <!-- =====================================================
-         WHAT I LEARN
-    ====================================================== -->
-
-    <section id="learning">
-
-        <h2>What I Am Learning</h2>
-
-        <article>
-
-            <h3>HTML</h3>
-
-            <p>
-                HTML, or HyperText Markup Language, is used to create the
-                structure of webpages. I am learning how headings,
-                paragraphs, links, images, lists, tables, forms, sections,
-                articles, and other HTML elements work.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>CSS</h3>
-
-            <p>
-                CSS is used to style webpages. I am learning about colors,
-                spacing, layouts, typography, responsive design,
-                animations, and other visual effects.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>JavaScript</h3>
-
-            <p>
-                JavaScript allows websites to become interactive.
-                I want to learn how buttons, menus, animations, forms,
-                games, and other interactive features can be programmed.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Web Development</h3>
-
-            <p>
-                My long-term goal is to understand the complete process of
-                creating a website, from writing code to testing it and
-                finally publishing it online.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <!-- =====================================================
-         MY CODING JOURNEY
-    ====================================================== -->
-
-    <section>
-
-        <h2>My Coding Journey</h2>
-
-        <ol>
-
-            <li>
-                <strong>Starting Point:</strong>
-                I became interested in computers and technology.
-            </li>
-
-            <li>
-                <strong>Learning HTML:</strong>
-                I started understanding the basic structure of webpages.
-            </li>
-
-            <li>
-                <strong>Building Pages:</strong>
-                I started creating simple personal webpages.
-            </li>
-
-            <li>
-                <strong>Learning CSS:</strong>
-                I began exploring how webpages can be designed and styled.
-            </li>
-
-            <li>
-                <strong>Experimenting:</strong>
-                I started adding different sections, links, images,
-                animations, and interactive ideas.
-            </li>
-
-            <li>
-                <strong>Publishing:</strong>
-                I learned about putting websites online using services
-                such as Vercel.
-            </li>
-
-            <li>
-                <strong>Future:</strong>
-                I want to continue learning JavaScript and more advanced
-                web development.
-            </li>
-
-        </ol>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROJECTS
-    ====================================================== -->
-
-    <section id="projects">
-
-        <h2>My Projects</h2>
-
-        <p>
-            These are some of the types of projects I enjoy creating and
-            experimenting with.
-        </p>
-
-
-        <article>
-
-            <h3>Project 01 — Personal Portfolio</h3>
-
-            <p>
-                A personal portfolio website containing information about
-                me, my education, my skills, my mentor, my interests,
-                projects, and contact information.
-            </p>
-
-            <p>
-                <strong>Technology:</strong> HTML, CSS and JavaScript
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Project 02 — Personal Blog</h3>
-
-            <p>
-                A blog-style website where I can write about my learning
-                journey, technology, coding, projects, and things I
-                discover.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Project 03 — School Project Website</h3>
-
-            <p>
-                A website concept designed to present school-related
-                information in an organized and easy-to-read format.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Project 04 — Creative Website Experiments</h3>
-
-            <p>
-                I like experimenting with different webpage ideas,
-                layouts, sections, animations, themes, and interactive
-                concepts.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Project 05 — Future Web App</h3>
-
-            <p>
-                In the future I want to create a more advanced web
-                application using HTML, CSS, JavaScript, and possibly
-                other technologies.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <!-- =====================================================
-         TECHNOLOGY
-    ====================================================== -->
-
-    <section>
-
-        <h2>Technology I Use</h2>
-
-        <ul>
-
-            <li>
-                <strong>HTML:</strong>
-                For webpage structure.
-            </li>
-
-            <li>
-                <strong>CSS:</strong>
-                For webpage design.
-            </li>
-
-            <li>
-                <strong>JavaScript:</strong>
-                For future interactive projects.
-            </li>
-
-            <li>
-                <strong>Visual Studio Code:</strong>
-                For writing and editing code.
-            </li>
-
-            <li>
-                <strong>Web Browser:</strong>
-                For testing websites.
-            </li>
-
-            <li>
-                <strong>Vercel:</strong>
-                For deploying websites online.
-            </li>
-
-        </ul>
-
-    </section>
-
-
-    <!-- =====================================================
-         MY VALUES
-    ====================================================== -->
-
-    <section>
-
-        <h2>What I Believe</h2>
-
-        <article>
-
-            <h3>Keep Learning</h3>
-
-            <p>
-                Technology changes constantly, so I want to keep learning
-                and improving my knowledge.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Practice Matters</h3>
-
-            <p>
-                Reading about coding is useful, but actually writing code
-                and creating projects helps me understand it better.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Mistakes Are Part of Learning</h3>
-
-            <p>
-                When code does not work, I try to find the problem,
-                understand the mistake, and improve the project.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Be Creative</h3>
-
-            <p>
-                Coding is not only about following instructions.
-                It can also be a way to turn creative ideas into real
-                projects.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <!-- =====================================================
-         FUTURE GOALS
-    ====================================================== -->
-
-    <section id="goals">
-
-        <h2>My Future Goals</h2>
-
-        <p>
-            I have many things I want to learn and accomplish in the
-            future.
-        </p>
-
-        <ul>
-
-            <li>Become a better programmer.</li>
-
-            <li>Learn HTML deeply.</li>
-
-            <li>Become comfortable with CSS.</li>
-
-            <li>Learn JavaScript properly.</li>
-
-            <li>Build responsive websites.</li>
-
-            <li>Create useful web applications.</li>
-
-            <li>Learn more programming languages.</li>
-
-            <li>Build projects that other people can use.</li>
-
-            <li>Continue improving my portfolio.</li>
-
-            <li>Keep learning from teachers and mentors.</li>
-
-        </ul>
-
-    </section>
-
-
-    <!-- =====================================================
-         BLOG
-    ====================================================== -->
-
-    <section id="blog">
-
-        <h2>My Learning Blog</h2>
-
-
-        <article>
-
-            <header>
-
-                <h3>My First Steps Into Web Development</h3>
+                <h3>GUM-GUM</h3>
 
                 <p>
-                    <time datetime="2026-09-18">September 18, 2026</time>
+                    Luffy's body possesses incredible flexibility and
+                    elasticity, allowing him to fight in completely
+                    unpredictable ways.
                 </p>
 
-            </header>
-
-            <p>
-                Starting web development introduced me to the basic
-                structure of webpages. HTML showed me that a webpage is
-                built using different elements that each have a purpose.
-            </p>
-
-            <p>
-                As I continue learning, I want to understand not only how
-                to write code, but also why the code works.
-            </p>
-
-        </article>
+                <div class="card-line"></div>
+            </div>
 
 
-        <article>
+            <div class="power-card reveal">
+                <div class="card-number">02</div>
 
-            <header>
-
-                <h3>Why I Like Coding</h3>
+                <h3>HAKI</h3>
 
                 <p>
-                    <time datetime="2026-09-18">September 18, 2026</time>
+                    His mastery of Haki allows him to sense opponents,
+                    strengthen his attacks and overwhelm powerful enemies.
                 </p>
 
-            </header>
-
-            <p>
-                I like coding because it allows me to create things using
-                ideas. A blank HTML document can eventually become a full
-                website.
-            </p>
-
-            <p>
-                The ability to experiment, make mistakes, fix problems,
-                and see the result makes programming interesting to me.
-            </p>
-
-        </article>
+                <div class="card-line"></div>
+            </div>
 
 
-        <article>
+            <div class="power-card reveal">
+                <div class="card-number">03</div>
 
-            <header>
-
-                <h3>Learning From My Mentor</h3>
+                <h3>GEAR 5</h3>
 
                 <p>
-                    <time datetime="2026-09-18">September 18, 2026</time>
+                    Luffy's awakening gives him extraordinary freedom
+                    in battle, turning his imagination into a weapon.
                 </p>
 
-            </header>
+                <div class="card-line"></div>
+            </div>
 
-            <p>
-                Having someone who can explain concepts and provide
-                guidance is valuable when learning something new.
-            </p>
-
-            <p>
-                My mentor, Bibek Bhusal Sir, has helped me learn about
-                technology and coding concepts and has encouraged me to
-                continue practicing.
-            </p>
-
-        </article>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         FAVORITE TOPICS
-    ====================================================== -->
+    <!-- CINEMATIC VIDEO -->
+    <section class="cinematic">
 
-    <section>
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source
+                src="Monkey D. Luffy Manga Animation _ Twixtor Clips _ One Piece.mp4"
+                type="video/mp4"
+            >
+        </video>
 
-        <h2>Things I Enjoy</h2>
+        <div class="cinematic-overlay"></div>
 
-        <table border="1">
+        <div class="cinematic-text reveal">
 
-            <thead>
+            <p>THE SEA IS WAITING</p>
 
-                <tr>
-                    <th>Category</th>
-                    <th>Things I Enjoy</th>
-                </tr>
+            <h2>
+                KEEP
+                <span>SAILING.</span>
+            </h2>
 
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>Technology</td>
-                    <td>Computers, coding, websites and programming</td>
-                </tr>
-
-                <tr>
-                    <td>Football</td>
-                    <td>Playing football and improving skills</td>
-                </tr>
-
-                <tr>
-                    <td>Gaming</td>
-                    <td>Playing games and exploring game mechanics</td>
-                </tr>
-
-                <tr>
-                    <td>Anime</td>
-                    <td>Watching anime and following interesting stories</td>
-                </tr>
-
-                <tr>
-                    <td>Learning</td>
-                    <td>Trying new skills and experimenting with projects</td>
-                </tr>
-
-            </tbody>
-
-        </table>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         ACHIEVEMENTS
-    ====================================================== -->
+    <!-- CREW -->
+    <section class="crew" id="crew">
 
-    <section>
+        <div class="section-heading reveal">
 
-        <h2>My Achievements</h2>
+            <p class="section-label">03 — STRAW HAT PIRATES</p>
 
-        <ul>
+            <h2>
+                HIS
+                <span>CREW</span>
+            </h2>
 
-            <li>Started learning web development.</li>
-
-            <li>Created personal webpage projects.</li>
-
-            <li>Learned basic HTML structure.</li>
-
-            <li>Experimented with CSS and website design.</li>
-
-            <li>Learned about website deployment.</li>
-
-            <li>Created and worked on a personal portfolio.</li>
-
-            <li>Continued learning through practical projects.</li>
-
-        </ul>
-
-    </section>
+        </div>
 
 
-    <!-- =====================================================
-         PERSONAL PHILOSOPHY
-    ====================================================== -->
+        <div class="crew-grid">
 
-    <section>
+            <div class="crew-card reveal">
+                <span>01</span>
+                <h3>ZORO</h3>
+                <p>Combatant</p>
+            </div>
 
-        <h2>My Learning Philosophy</h2>
+            <div class="crew-card reveal">
+                <span>02</span>
+                <h3>NAMI</h3>
+                <p>Navigator</p>
+            </div>
 
-        <p>
-            I believe that becoming good at something takes time.
-            I do not need to understand everything immediately.
-        </p>
+            <div class="crew-card reveal">
+                <span>03</span>
+                <h3>USOPP</h3>
+                <p>Sniper</p>
+            </div>
 
-        <p>
-            I can learn one concept, practice it, make mistakes, fix
-            those mistakes, and then move on to the next concept.
-        </p>
+            <div class="crew-card reveal">
+                <span>04</span>
+                <h3>SANJI</h3>
+                <p>Cook</p>
+            </div>
 
-        <p>
-            My goal is to keep improving instead of trying to become
-            perfect immediately.
-        </p>
+            <div class="crew-card reveal">
+                <span>05</span>
+                <h3>ROBIN</h3>
+                <p>Archaeologist</p>
+            </div>
 
-    </section>
+            <div class="crew-card reveal">
+                <span>06</span>
+                <h3>FRANKY</h3>
+                <p>Shipwright</p>
+            </div>
 
-
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>
-            If you want to contact me or learn more about my projects,
-            you can use the information below.
-        </p>
-
-        <address>
-
-            <p>
-                <strong>Name:</strong>
-                Rezin Raskoti
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:felizthereaper@gmail.com">
-                    felizthereaper@gmail.com
-                </a>
-            </p>
-
-            <p>
-                <strong>Phone:</strong>
-                <a href="tel:+9779847219772">
-                    +977 9847219772
-                </a>
-            </p>
-
-            <p>
-                <strong>School:</strong>
-                Oxford School
-            </p>
-
-            <p>
-                <strong>Location:</strong>
-                Butwal, Nepal
-            </p>
-
-        </address>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         CONTACT FORM
-    ====================================================== -->
+    <!-- BOUNTY -->
+    <section class="bounty">
 
-    <section>
+        <div class="bounty-content reveal">
 
-        <h2>Send Me a Message</h2>
+            <p class="section-label">WANTED</p>
 
-        <form action="#" method="post">
+            <h2>MONKEY D. LUFFY</h2>
 
-            <fieldset>
+            <div class="bounty-number">
+                3,000,000,000
+            </div>
 
-                <legend>Contact Form</legend>
+            <p class="berries">BERRIES</p>
 
-                <p>
-                    <label for="name">
-                        Your Name:
-                    </label>
-
-                    <br>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                    >
-                </p>
-
-
-                <p>
-                    <label for="email">
-                        Your Email:
-                    </label>
-
-                    <br>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-                </p>
-
-
-                <p>
-                    <label for="subject">
-                        Subject:
-                    </label>
-
-                    <br>
-
-                    <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        placeholder="Enter the subject"
-                    >
-                </p>
-
-
-                <p>
-                    <label for="message">
-                        Message:
-                    </label>
-
-                    <br>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="8"
-                        cols="40"
-                        placeholder="Write your message here..."
-                    ></textarea>
-                </p>
-
-
-                <p>
-
-                    <button type="submit">
-                        Send Message
-                    </button>
-
-                    <button type="reset">
-                        Clear Form
-                    </button>
-
-                </p>
-
-            </fieldset>
-
-        </form>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         FAQ
-    ====================================================== -->
+    <!-- DREAM -->
+    <section class="dream" id="dream">
 
-    <section>
+        <div class="dream-content reveal">
 
-        <h2>Frequently Asked Questions</h2>
+            <p class="section-label">THE DREAM</p>
 
-
-        <details>
-
-            <summary>Who is Rezin Raskoti?</summary>
-
-            <p>
-                Rezin Raskoti is a student from Oxford School in
-                Butwal, Nepal, interested in technology, coding,
-                websites, football, gaming, and learning.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>What does Rezin learn?</summary>
+            <h2>
+                ONE DAY...
+                <span>I'LL BECOME</span>
+                THE PIRATE KING.
+            </h2>
 
             <p>
-                Rezin is learning web development, including HTML,
-                CSS, JavaScript, and related technologies.
+                The journey isn't about reaching the destination quickly.
+                It's about the people you meet, the battles you survive,
+                and the freedom you discover along the way.
             </p>
 
-        </details>
+            <div class="final-line"></div>
 
-
-        <details>
-
-            <summary>Who is Rezin's mentor?</summary>
-
-            <p>
-                Rezin's mentor is Bibek Bhusal Sir, who has helped
-                him learn about coding and technology.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>Where does Rezin study?</summary>
-
-            <p>
-                Rezin studies at Oxford School in Butwal, Nepal.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>What are Rezin's future goals?</summary>
-
-            <p>
-                Rezin wants to continue improving his programming
-                skills and eventually build advanced websites and
-                useful applications.
-            </p>
-
-        </details>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         FINAL MESSAGE
-    ====================================================== -->
+    <!-- FOOTER -->
+    <footer>
 
-    <section>
-
-        <h2>Thank You for Visiting</h2>
+        <div class="footer-logo">LUFFY<span>.</span></div>
 
         <p>
-            Thank you for taking the time to visit my portfolio.
+            THE FUTURE PIRATE KING
         </p>
 
-        <p>
-            This website is more than just a webpage. It represents
-            my learning journey, my interests, my projects, and the
-            skills I am working toward.
-        </p>
+        <div class="footer-line"></div>
 
-        <p>
-            I am still learning, and there is a lot more I want to
-            discover.
-        </p>
+        <small>
+            ONE PIECE • STRAW HAT PIRATES
+        </small>
 
-        <p>
-            <strong>
-                This is only the beginning of my coding journey.
-            </strong>
-        </p>
-
-        <p>
-            <a href="#top">Back to Top ↑</a>
-        </p>
-
-    </section>
-
-</main>
+    </footer>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================== -->
+    <!-- SCROLL REVEAL SCRIPT -->
+    <script>
 
-<footer>
+        const reveals = document.querySelectorAll(".reveal");
 
-    <hr>
+        const observer = new IntersectionObserver(
+            (entries) => {
 
-    <p>
-        &copy; 2026 Rezin Raskoti. All Rights Reserved.
-    </p>
+                entries.forEach((entry) => {
 
-    <p>
-        Student Portfolio • Oxford School • Butwal, Nepal
-    </p>
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
 
-    <p>
-        Built with HTML and a passion for learning.
-    </p>
+                });
 
-    <p>
-        <a href="#top">Return to Top</a>
-    </p>
+            },
+            {
+                threshold: 0.15
+            }
+        );
 
-</footer>
-```
+
+        reveals.forEach((element) => {
+            observer.observe(element);
+        });
+
+
+        /* PARALLAX EFFECT */
+
+        window.addEventListener("scroll", () => {
+
+            const scroll = window.scrollY;
+
+            document.querySelectorAll(".hero-video").forEach(video => {
+
+                video.style.transform =
+                    `scale(1.05) translateY(${scroll * 0.15}px)`;
+
+            });
+
+        });
+
+
+        /* REMOVE LOADER */
+
+        window.addEventListener("load", () => {
+
+            setTimeout(() => {
+
+                document.querySelector(".loader").classList.add("hide");
+
+            }, 1000);
+
+        });
+
+    </script>
 
 </body>
 </html>
