@@ -1,32 +1,35 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Monkey D. Luffy</title>
+    <title>MONKEY D. LUFFY</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Luffy Video -->
-    <section class="video-section">
-        <video
-            class="luffy-video"
-            src="Monkey D. Luffy Manga Animation _ Twixtor Clips _ One Piece(1).mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls>
+    <div class="hero">
+
+        <!-- LUFFY VIDEO -->
+        <video id="luffyVideo" autoplay muted playsinline preload="auto">
+            <source src="./luffy.mp4" type="video/mp4">
         </video>
-    </section>
+
+        <!-- DARK OVERLAY -->
+        <div class="overlay"></div>
+
+        <!-- 3D LUFFY TEXT -->
+        <div class="title-container">
+            <h1>MONKEY D. LUFFY</h1>
+            <p>THE FUTURE PIRATE KING</p>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 
 </body>
 </html>
-```
