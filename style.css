@@ -1,1 +1,39 @@
+/* =========================================================
+   ENTRANCE VIDEO
+========================================================= */
 
+#entranceScreen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1.3s ease,
+        visibility 1.3s ease;
+}
+
+#entranceVideo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+#entranceScreen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
