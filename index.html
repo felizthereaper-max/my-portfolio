@@ -3,2971 +3,1212 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#02030a">
-    <meta name="description" content="Rezin AI — Explore the future of artificial intelligence.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Rezin AI — AI Beyond Limits</title>
+    <meta
+        name="theme-color"
+        content="#03030b"
+    >
 
-    <style>
-        /* =========================================================
-           ENTRANCE VIDEO
-        ========================================================= */
+    <meta
+        name="description"
+        content="Rezin AI — Your futuristic personal AI command center."
+    >
 
-        #entranceScreen {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: 9999999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 1.3s ease, visibility 1.3s ease;
-        }
+    <title>Rezin AI — Think Beyond</title>
 
-        #entranceVideo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            background: #000;
-        }
-
-        #entranceScreen.hide {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        #videoFallback {
-            display: none;
-            position: absolute;
-            color: white;
-            font-size: 14px;
-            letter-spacing: 2px;
-        }
-
-        body.intro-active {
-            overflow: hidden;
-        }
-
-        #siteContent {
-            opacity: 0;
-            transform: scale(1.02);
-            transition:
-                opacity 1.2s ease,
-                transform 1.2s ease;
-        }
-
-        #siteContent.show {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --purple: #806cff;
-            --purple2: #a76dff;
-            --blue: #28c8ff;
-            --cyan: #00eaff;
-            --bg: #02030a;
-            --panel: rgba(13, 15, 30, 0.68);
-            --border: rgba(255,255,255,0.09);
-            --muted: #85899f;
-        }
-
-        body {
-            min-height: 100vh;
-            font-family: Inter, Arial, Helvetica, sans-serif;
-            color: white;
-            background: #02030a;
-            overflow-x: hidden;
-        }
-
-        button,
-        a {
-            font-family: inherit;
-        }
-
-
-        /* =========================================================
-           SPACE BACKGROUND
-        ========================================================= */
-
-        .space {
-            position: fixed;
-            inset: 0;
-            z-index: -100;
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 50% 50%,
-                    rgba(75,52,160,0.12),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(40,80,255,0.12),
-                    transparent 25%
-                ),
-                radial-gradient(
-                    circle at 85% 80%,
-                    rgba(190,50,255,0.10),
-                    transparent 25%
-                ),
-                #02030a;
-        }
-
-        #stars {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-
-        /* =========================================================
-           NEBULA
-        ========================================================= */
-
-        .nebula {
-            position: absolute;
-            width: 700px;
-            height: 700px;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.25;
-            pointer-events: none;
-
-            animation:
-                nebulaMove 18s ease-in-out infinite;
-        }
-
-        .nebula.one {
-            background: #4534b8;
-            left: -300px;
-            top: 10%;
-        }
-
-        .nebula.two {
-            background: #7025a5;
-            right: -300px;
-            bottom: -100px;
-            animation-delay: -8s;
-        }
-
-        @keyframes nebulaMove {
-            0%, 100% {
-                transform: translate3d(0,0,0) scale(1);
-            }
-
-            50% {
-                transform: translate3d(80px,-50px,0) scale(1.15);
-            }
-        }
-
-
-        /* =========================================================
-           SHOOTING STARS
-        ========================================================= */
-
-        .shooting-star {
-            position: absolute;
-            width: 120px;
-            height: 2px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    white
-                );
-
-            transform: rotate(-35deg);
-            opacity: 0;
-
-            animation:
-                shooting 7s linear infinite;
-        }
-
-        .shooting-star:nth-child(1) {
-            top: 20%;
-            left: 20%;
-            animation-delay: 2s;
-        }
-
-        .shooting-star:nth-child(2) {
-            top: 35%;
-            left: 75%;
-            animation-delay: 6s;
-        }
-
-        .shooting-star:nth-child(3) {
-            top: 65%;
-            left: 40%;
-            animation-delay: 10s;
-        }
-
-        @keyframes shooting {
-            0% {
-                transform:
-                    translate3d(0,0,0)
-                    rotate(-35deg);
-                opacity: 0;
-            }
-
-            8% {
-                opacity: 1;
-            }
-
-            20% {
-                transform:
-                    translate3d(-450px,300px,0)
-                    rotate(-35deg);
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-
-        /* =========================================================
-           TOP NAV
-        ========================================================= */
-
-        .topbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 72px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 35px 0 300px;
-            z-index: 1000;
-
-            background: rgba(2,3,10,0.48);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-
-            backdrop-filter: blur(25px);
-            transition: 0.3s;
-        }
-
-        .topbar.scrolled {
-            background: rgba(2,3,10,0.82);
-
-            box-shadow:
-                0 15px 50px rgba(0,0,0,0.35);
-        }
-
-
-        /* =========================================================
-           LOGO
-        ========================================================= */
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            font-size: 18px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .brand-orb {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle at 30% 25%,
-                    white,
-                    #9585ff 25%,
-                    #4934c7 60%,
-                    #120d32
-                );
-
-            box-shadow:
-                0 0 15px #7565ff,
-                0 0 35px rgba(117,101,255,0.4);
-
-            animation:
-                brandPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes brandPulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.12);
-            }
-        }
-
-        .brand span {
-            color: #9183ff;
-        }
-
-
-        /* =========================================================
-           STATUS
-        ========================================================= */
-
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-
-            color: #85899d;
-            font-size: 12px;
-        }
-
-        .status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-
-            background: #00e6a8;
-
-            box-shadow:
-                0 0 8px #00e6a8,
-                0 0 16px rgba(0,230,168,0.4);
-
-            animation:
-                statusBlink 2s infinite;
-        }
-
-        @keyframes statusBlink {
-            0%, 100% {
-                opacity: 0.5;
-            }
-
-            50% {
-                opacity: 1;
-            }
-        }
-
-
-        /* =========================================================
-           LEFT SIDEBAR
-        ========================================================= */
-
-        .sidebar {
-            position: fixed;
-
-            left: 0;
-            top: 0;
-            bottom: 0;
-
-            width: 260px;
-
-            z-index: 1100;
-
-            padding: 28px 16px;
-
-            background: rgba(3,4,12,0.72);
-
-            border-right:
-                1px solid rgba(255,255,255,0.07);
-
-            backdrop-filter: blur(25px);
-
-            display: flex;
-            flex-direction: column;
-
-            overflow-y: auto;
-        }
-
-        .side-title {
-            padding: 5px 15px 25px;
-
-            color: #555a72;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-        }
-
-        .menu-button {
-            width: 100%;
-            min-height: 52px;
-
-            display: flex;
-            align-items: center;
-            gap: 13px;
-
-            padding: 10px 14px;
-
-            border: 1px solid transparent;
-            border-radius: 13px;
-
-            color: #777c93;
-            background: transparent;
-
-            cursor: pointer;
-            text-align: left;
-
-            transition: 0.3s ease;
-        }
-
-        .menu-button:hover {
-            color: white;
-
-            background:
-                rgba(255,255,255,0.04);
-
-            border-color:
-                rgba(255,255,255,0.06);
-
-            transform:
-                translateX(3px);
-        }
-
-        .menu-button.active {
-            color: white;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(117,101,255,0.18),
-                    rgba(117,101,255,0.04)
-                );
-
-            border-color:
-                rgba(117,101,255,0.22);
-
-            box-shadow:
-                inset 3px 0 0 #7565ff,
-                0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .menu-icon {
-            width: 34px;
-            height: 34px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 9px;
-
-            background:
-                rgba(255,255,255,0.045);
-
-            font-size: 16px;
-        }
-
-        .menu-button.active .menu-icon {
-            background:
-                rgba(117,101,255,0.18);
-
-            box-shadow:
-                0 0 20px
-                rgba(117,101,255,0.12);
-        }
-
-        .menu-text {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        .menu-text strong {
-            font-size: 13px;
-        }
-
-        .menu-text small {
-            color: #555b72;
-            font-size: 9px;
-        }
-
-        .side-bottom {
-            margin-top: auto;
-            padding: 18px 14px 5px;
-
-            color: #555a70;
-            font-size: 10px;
-            line-height: 1.7;
-        }
-
-        .side-bottom strong {
-            color: #8275ff;
-        }
-
-
-        /* =========================================================
-           MAIN
-        ========================================================= */
-
-        main {
-            margin-left: 260px;
-            padding-top: 72px;
-            min-height: 100vh;
-        }
-
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: calc(100vh - 72px);
-
-            position: relative;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            align-items: center;
-            gap: 20px;
-
-            padding: 70px 7%;
-
-            perspective: 1400px;
-        }
-
-        .hero-copy {
-            position: relative;
-            z-index: 20;
-
-            max-width: 650px;
-
-            animation:
-                heroText 1.2s
-                cubic-bezier(.16,1,.3,1);
-        }
-
-        @keyframes heroText {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-
-            padding: 8px 13px;
-            margin-bottom: 25px;
-
-            border-radius: 100px;
-
-            border:
-                1px solid rgba(126,108,255,0.25);
-
-            background:
-                rgba(126,108,255,0.07);
-
-            color: #9d94ff;
-
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .eyebrow::before {
-            content: "";
-
-            width: 6px;
-            height: 6px;
-
-            border-radius: 50%;
-
-            background: #00eaff;
-
-            box-shadow:
-                0 0 10px #00eaff;
-        }
-
-        .hero h1 {
-            font-size: clamp(55px, 7vw, 105px);
-
-            line-height: 0.9;
-            letter-spacing: -6px;
-
-            margin-bottom: 28px;
-
-            font-weight: 900;
-        }
-
-        .hero h1 .line {
-            display: block;
-        }
-
-        .gradient {
-            background:
-                linear-gradient(
-                    90deg,
-                    #ffffff 0%,
-                    #9485ff 25%,
-                    #d76dff 50%,
-                    #42dfff 75%,
-                    #ffffff 100%
-                );
-
-            background-size: 300%;
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            color: transparent;
-
-            animation:
-                gradientFlow 7s linear infinite;
-        }
-
-        @keyframes gradientFlow {
-            0% {
-                background-position: 0%;
-            }
-
-            100% {
-                background-position: 300%;
-            }
-        }
-
-        .hero-description {
-            max-width: 590px;
-
-            color: #85899e;
-
-            line-height: 1.8;
-            font-size: 16px;
-        }
-
-        .hero-description strong {
-            color: #d7d4ff;
-        }
-
-
-        /* =========================================================
-           CTA
-        ========================================================= */
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-
-            margin-top: 35px;
-        }
-
-        .cta {
-            position: relative;
-
-            border: 0;
-
-            padding: 15px 22px;
-
-            border-radius: 11px;
-
-            color: white;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            cursor: pointer;
-            overflow: hidden;
-
-            transition: 0.3s;
-        }
-
-        .cta.primary {
-            background:
-                linear-gradient(
-                    135deg,
-                    #7565ff,
-                    #a158ff
-                );
-
-            box-shadow:
-                0 12px 35px
-                rgba(117,101,255,0.3);
-        }
-
-        .cta.secondary {
-            background:
-                rgba(255,255,255,0.05);
-
-            border:
-                1px solid rgba(255,255,255,0.1);
-        }
-
-        .cta:hover {
-            transform:
-                translateY(-4px);
-
-            box-shadow:
-                0 18px 45px
-                rgba(117,101,255,0.28);
-        }
-
-
-        /* =========================================================
-           3D UNIVERSE
-        ========================================================= */
-
-        .universe {
-            position: relative;
-
-            width: min(520px, 90%);
-            aspect-ratio: 1;
-
-            margin: auto;
-
-            transform-style: preserve-3d;
-
-            transition:
-                transform 0.15s ease-out;
-        }
-
-        .universe::before {
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            width: 60%;
-            height: 60%;
-
-            transform:
-                translate(-50%,-50%);
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(105,75,255,0.28),
-                    transparent 70%
-                );
-
-            filter: blur(40px);
-        }
-
-        .core {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            width: 145px;
-            height: 145px;
-
-            transform:
-                translate(-50%,-50%);
-
-            border-radius: 43%;
-
-            background:
-                radial-gradient(
-                    circle at 25% 20%,
-                    #ffffff,
-                    #c3baff 7%,
-                    #8777ff 25%,
-                    #4935c5 50%,
-                    #17103e 80%,
-                    #060510 100%
-                );
-
-            box-shadow:
-                inset 15px 15px 35px
-                rgba(255,255,255,0.3),
-
-                inset -20px -20px 45px
-                rgba(0,0,0,0.55),
-
-                0 0 30px
-                rgba(125,105,255,0.9),
-
-                0 0 80px
-                rgba(125,105,255,0.45),
-
-                0 0 150px
-                rgba(76,50,255,0.22);
-
-            transform-style: preserve-3d;
-
-            animation:
-                coreFloat 5s ease-in-out infinite;
-        }
-
-        .core::before {
-            content: "";
-
-            position: absolute;
-
-            inset: 13px;
-
-            border-radius: 40%;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.4);
-
-            box-shadow:
-                inset 0 0 25px
-                rgba(255,255,255,0.13);
-        }
-
-        .core::after {
-            content: "✦";
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%,-50%);
-
-            font-size: 48px;
-
-            color: white;
-
-            text-shadow:
-                0 0 12px white,
-                0 0 35px #8275ff,
-                0 0 60px #00d9ff;
-        }
-
-        @keyframes coreFloat {
-            0%, 100% {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(8deg)
-                    rotateY(-8deg)
-                    translateZ(0);
-            }
-
-            50% {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(-8deg)
-                    rotateY(12deg)
-                    translateZ(25px);
-            }
-        }
-
-
-        /* =========================================================
-           ORBITS
-        ========================================================= */
-
-        .ring {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            border-radius: 50%;
-
-            transform-style: preserve-3d;
-
-            border:
-                1px solid
-                rgba(131,115,255,0.3);
-
-            box-shadow:
-                0 0 15px
-                rgba(117,101,255,0.08);
-        }
-
-        .ring::after {
-            content: "";
-
-            position: absolute;
-
-            width: 8px;
-            height: 8px;
-
-            border-radius: 50%;
-
-            background: #8b7cff;
-
-            box-shadow:
-                0 0 10px #8b7cff,
-                0 0 25px #8b7cff;
-        }
-
-        .ring.one {
-            width: 310px;
-            height: 105px;
-
-            transform:
-                translate(-50%,-50%)
-                rotateX(67deg);
-
-            animation:
-                ringOne 9s linear infinite;
-        }
-
-        .ring.one::after {
-            top: -4px;
-            left: 50%;
-        }
-
-        .ring.two {
-            width: 380px;
-            height: 135px;
-
-            border-color:
-                rgba(0,220,255,0.2);
-
-            transform:
-                translate(-50%,-50%)
-                rotateY(67deg);
-
-            animation:
-                ringTwo 12s linear infinite;
-        }
-
-        .ring.two::after {
-            right: -4px;
-            top: 50%;
-        }
-
-        .ring.three {
-            width: 440px;
-            height: 160px;
-
-            border-color:
-                rgba(210,90,255,0.16);
-
-            transform:
-                translate(-50%,-50%)
-                rotateX(70deg)
-                rotateZ(35deg);
-
-            animation:
-                ringThree 15s linear infinite;
-        }
-
-        .ring.three::after {
-            left: 10%;
-            bottom: -4px;
-        }
-
-        @keyframes ringOne {
-            from {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(67deg)
-                    rotateZ(0);
-            }
-
-            to {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(67deg)
-                    rotateZ(360deg);
-            }
-        }
-
-        @keyframes ringTwo {
-            from {
-                transform:
-                    translate(-50%,-50%)
-                    rotateY(67deg)
-                    rotateZ(0);
-            }
-
-            to {
-                transform:
-                    translate(-50%,-50%)
-                    rotateY(67deg)
-                    rotateZ(360deg);
-            }
-        }
-
-        @keyframes ringThree {
-            from {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(70deg)
-                    rotateZ(35deg)
-                    rotateY(0);
-            }
-
-            to {
-                transform:
-                    translate(-50%,-50%)
-                    rotateX(70deg)
-                    rotateZ(395deg)
-                    rotateY(360deg);
-            }
-        }
-
-
-        /* =========================================================
-           HOLOGRAM LABELS
-        ========================================================= */
-
-        .holo {
-            position: absolute;
-
-            padding: 8px 11px;
-
-            border:
-                1px solid
-                rgba(117,101,255,0.2);
-
-            border-radius: 9px;
-
-            background:
-                rgba(10,10,25,0.55);
-
-            backdrop-filter:
-                blur(12px);
-
-            color: #8f93a9;
-
-            font-size: 9px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-
-            box-shadow:
-                0 0 30px
-                rgba(117,101,255,0.08);
-
-            animation:
-                holoFloat 4s ease-in-out infinite;
-        }
-
-        .holo.a {
-            left: 3%;
-            top: 35%;
-        }
-
-        .holo.b {
-            right: 4%;
-            top: 25%;
-            animation-delay: -1s;
-        }
-
-        .holo.c {
-            right: 5%;
-            bottom: 24%;
-            animation-delay: -2s;
-        }
-
-        .holo.d {
-            left: 8%;
-            bottom: 20%;
-            animation-delay: -3s;
-        }
-
-        @keyframes holoFloat {
-            0%, 100% {
-                transform:
-                    translateY(0);
-            }
-
-            50% {
-                transform:
-                    translateY(-9px);
-            }
-        }
-
-
-        /* =========================================================
-           CAPABILITIES
-        ========================================================= */
-
-        .capabilities {
-            position: relative;
-
-            padding:
-                100px 7%;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.05);
-        }
-
-        .section-heading {
-            max-width: 700px;
-            margin-bottom: 45px;
-        }
-
-        .section-heading small {
-            color: #8275ff;
-
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .section-heading h2 {
-            font-size:
-                clamp(35px,5vw,65px);
-
-            letter-spacing:
-                -3px;
-
-            margin:
-                10px 0 15px;
-        }
-
-        .section-heading p {
-            color: #777b91;
-
-            line-height: 1.8;
-
-            max-width: 600px;
-        }
-
-        .capability-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 18px;
-        }
-
-        .capability {
-            min-height: 240px;
-
-            padding: 28px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.07);
-
-            border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.055),
-                    rgba(255,255,255,0.018)
-                );
-
-            backdrop-filter:
-                blur(20px);
-
-            position: relative;
-            overflow: hidden;
-
-            transition:
-                0.45s
-                cubic-bezier(.2,.8,.2,1);
-
-            opacity: 0;
-            transform:
-                translateY(35px);
-        }
-
-        .capability.visible {
-            opacity: 1;
-
-            transform:
-                translateY(0);
-        }
-
-        .capability:hover {
-            transform:
-                translateY(-10px)
-                rotateX(2deg)
-                rotateY(-2deg);
-
-            border-color:
-                rgba(126,108,255,0.3);
-
-            box-shadow:
-                0 25px 70px
-                rgba(0,0,0,0.3);
-        }
-
-        .capability::before {
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-            height: 180px;
-
-            right: -100px;
-            top: -100px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(117,101,255,0.2),
-                    transparent
-                );
-
-            transition:
-                0.5s;
-        }
-
-        .capability:hover::before {
-            transform:
-                scale(1.7);
-        }
-
-        .cap-icon {
-            width: 50px;
-            height: 50px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 14px;
-
-            background:
-                rgba(117,101,255,0.1);
-
-            border:
-                1px solid
-                rgba(117,101,255,0.18);
-
-            font-size: 22px;
-
-            margin-bottom: 22px;
-        }
-
-        .capability h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .capability p {
-            color: #777b90;
-
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        .capability .arrow {
-            position: absolute;
-
-            right: 24px;
-            bottom: 22px;
-
-            color: #555a70;
-
-            transition:
-                0.3s;
-        }
-
-        .capability:hover .arrow {
-            color: #9587ff;
-
-            transform:
-                translateX(5px);
-        }
-
-
-        /* =========================================================
-           AI LAB
-        ========================================================= */
-
-        .ai-lab {
-            padding:
-                70px 7%
-                120px;
-        }
-
-        .lab {
-            min-height: 350px;
-
-            display: grid;
-
-            grid-template-columns:
-                1.2fr
-                0.8fr;
-
-            gap: 30px;
-
-            align-items: center;
-
-            padding: 45px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.08);
-
-            border-radius: 28px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(89,66,190,0.12),
-                    rgba(0,0,0,0.2)
-                );
-
-            backdrop-filter:
-                blur(25px);
-
-            overflow: hidden;
-
-            position: relative;
-        }
-
-        .lab-copy h2 {
-            font-size:
-                clamp(30px,4vw,50px);
-
-            letter-spacing:
-                -2px;
-
-            margin-bottom: 18px;
-        }
-
-        .lab-copy p {
-            color: #777c91;
-
-            max-width: 600px;
-
-            line-height: 1.8;
-        }
-
-        .lab-orb {
-            position: relative;
-
-            width: 190px;
-            height: 190px;
-
-            margin: auto;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle at 30% 25%,
-                    white,
-                    #8e7dff 12%,
-                    #3726a3 45%,
-                    #080611 80%
-                );
-
-            box-shadow:
-                0 0 50px
-                rgba(117,101,255,0.6),
-
-                inset
-                15px 10px 30px
-                rgba(255,255,255,0.25),
-
-                inset
-                -20px -20px 40px
-                rgba(0,0,0,0.55);
-
-            animation:
-                labFloat 5s ease-in-out infinite;
-        }
-
-        .lab-orb::after {
-            content: "";
-
-            position: absolute;
-
-            inset: -35px;
-
-            border:
-                1px solid
-                rgba(126,108,255,0.25);
-
-            border-radius: 50%;
-
-            transform:
-                rotateX(70deg);
-
-            animation:
-                labRing 6s linear infinite;
-        }
-
-        @keyframes labFloat {
-            0%, 100% {
-                transform:
-                    translateY(0);
-            }
-
-            50% {
-                transform:
-                    translateY(-18px);
-            }
-        }
-
-        @keyframes labRing {
-            from {
-                transform:
-                    rotateX(70deg)
-                    rotateZ(0);
-            }
-
-            to {
-                transform:
-                    rotateX(70deg)
-                    rotateZ(360deg);
-            }
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding:
-                45px 25px
-                80px;
-
-            text-align: center;
-
-            color: #4f5367;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.05);
-
-            font-size: 12px;
-        }
-
-        footer strong {
-            color: #8275ff;
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        .mobile-menu {
-            display: none;
-
-            position: fixed;
-
-            top: 17px;
-            left: 15px;
-
-            z-index: 2000;
-
-            width: 40px;
-            height: 40px;
-
-            border-radius: 10px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.1);
-
-            background:
-                rgba(10,10,20,0.8);
-
-            color: white;
-
-            cursor: pointer;
-
-            backdrop-filter:
-                blur(15px);
-        }
-
-        @media (max-width: 1050px) {
-
-            .sidebar {
-                width: 220px;
-            }
-
-            .topbar {
-                padding-left:
-                    250px;
-            }
-
-            main {
-                margin-left:
-                    220px;
-            }
-
-            .hero {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .hero-copy {
-                text-align: center;
-                margin: auto;
-            }
-
-            .hero-description {
-                margin: auto;
-            }
-
-            .hero-actions {
-                justify-content:
-                    center;
-            }
-
-            .capability-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 700px) {
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .sidebar {
-                transform:
-                    translateX(-100%);
-
-                transition:
-                    0.35s ease;
-
-                width: 260px;
-            }
-
-            .sidebar.open {
-                transform:
-                    translateX(0);
-            }
-
-            .topbar {
-                padding:
-                    0 20px 0 70px;
-            }
-
-            main {
-                margin-left:
-                    0;
-            }
-
-            .status {
-                display: none;
-            }
-
-            .hero {
-                padding:
-                    60px 20px;
-            }
-
-            .hero h1 {
-                font-size:
-                    clamp(55px,15vw,90px);
-
-                letter-spacing:
-                    -4px;
-            }
-
-            .universe {
-                width:
-                    100%;
-
-                max-width:
-                    430px;
-            }
-
-            .capabilities {
-                padding:
-                    80px 20px;
-            }
-
-            .capability-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .ai-lab {
-                padding:
-                    40px 20px;
-            }
-
-            .lab {
-                grid-template-columns:
-                    1fr;
-
-                padding:
-                    30px 20px;
-            }
-
-            .lab-orb {
-                width:
-                    150px;
-
-                height:
-                    150px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-
-            *::before,
-
-            *::after {
-                animation-duration:
-                    0.01ms !important;
-
-                animation-iteration-count:
-                    1 !important;
-
-                scroll-behavior:
-                    auto !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 
-<body class="intro-active">
+    <!-- =====================================================
+         CURSOR EFFECT
+    ====================================================== -->
 
-    <!-- =========================================================
-         ENTRANCE VIDEO
-    ========================================================= -->
+    <div class="cursor-glow"></div>
+    <div class="cursor-dot"></div>
 
-    <div id="entranceScreen">
+    <!-- =====================================================
+         SCROLL PROGRESS
+    ====================================================== -->
 
-        <video
-            id="entranceVideo"
-            autoplay
-            muted
-            playsinline
-            preload="auto">
+    <div class="scroll-progress">
+        <span id="scrollProgress"></span>
+    </div>
 
-            <source
-                src="assets/entrance.mp4"
-                type="video/mp4">
+    <!-- =====================================================
+         SPACE BACKGROUND
+    ====================================================== -->
 
-        </video>
+    <div class="space">
 
-        <div id="videoFallback">
-            Loading Rezin AI...
+        <canvas id="stars"></canvas>
+        <canvas id="network"></canvas>
+
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+
+        <div class="grid-floor"></div>
+
+        <div class="shooting-star star-1"></div>
+        <div class="shooting-star star-2"></div>
+        <div class="shooting-star star-3"></div>
+
+    </div>
+
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
+
+    <button
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-top">
+
+            <div class="system-label">
+                REZIN AI
+                <span>CORE</span>
+            </div>
+
+            <div class="side-logo">
+
+                <div class="logo-orb">
+                    <span>R</span>
+                </div>
+
+                <div>
+                    <strong>Rezin AI</strong>
+                    <small>PERSONAL INTELLIGENCE</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-section-label">
+            COMMAND CENTER
+        </div>
+
+        <nav class="menu">
+
+            <button
+                class="menu-button active"
+                data-target="home"
+            >
+                <span class="menu-icon">✦</span>
+
+                <span class="menu-text">
+                    <strong>AI Chat</strong>
+                    <small>TALK WITH REZIN</small>
+                </span>
+
+                <span class="menu-key">1</span>
+            </button>
+
+            <button
+                class="menu-button"
+                data-target="capabilities"
+            >
+                <span class="menu-icon">&lt;/&gt;</span>
+
+                <span class="menu-text">
+                    <strong>Coding</strong>
+                    <small>BUILD & DEBUG</small>
+                </span>
+
+                <span class="menu-key">2</span>
+            </button>
+
+            <button
+                class="menu-button"
+                data-target="learning"
+            >
+                <span class="menu-icon">◈</span>
+
+                <span class="menu-text">
+                    <strong>Learning</strong>
+                    <small>UNDERSTAND MORE</small>
+                </span>
+
+                <span class="menu-key">3</span>
+            </button>
+
+            <button
+                class="menu-button"
+                data-target="creative"
+            >
+                <span class="menu-icon">✧</span>
+
+                <span class="menu-text">
+                    <strong>Creative</strong>
+                    <small>CREATE IDEAS</small>
+                </span>
+
+                <span class="menu-key">4</span>
+            </button>
+
+            <button
+                class="menu-button"
+                data-target="problem"
+            >
+                <span class="menu-icon">⌁</span>
+
+                <span class="menu-text">
+                    <strong>Problem Solving</strong>
+                    <small>THINK & SOLVE</small>
+                </span>
+
+                <span class="menu-key">5</span>
+            </button>
+
+            <button
+                class="menu-button"
+                data-target="explore"
+            >
+                <span class="menu-icon">◎</span>
+
+                <span class="menu-text">
+                    <strong>Explore AI</strong>
+                    <small>DISCOVER MORE</small>
+                </span>
+
+                <span class="menu-key">6</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <button
+            class="command-button"
+            id="commandButton"
+        >
+            <span>⌘</span>
+            Command Palette
+            <kbd>Ctrl K</kbd>
+        </button>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-health">
+
+                <span class="health-dot"></span>
+
+                <div>
+                    <strong>REZIN CORE</strong>
+                    <small>INTERFACE READY</small>
+                </div>
+
+                <span class="health-signal"></span>
+
+            </div>
+
+            <div class="version">
+                REZIN AI // V2.0
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header
+        class="topbar"
+        id="topbar"
+    >
+
+        <div class="topbar-left">
+
+            <div class="mobile-brand">
+                <div class="mini-orb">R</div>
+                <strong>Rezin <span>AI</span></strong>
+            </div>
+
+            <div class="breadcrumb">
+                <span>REZIN</span>
+                <b>/</b>
+                <span>COMMAND CENTER</span>
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <button
+                class="top-action"
+                id="searchButton"
+            >
+                <span>⌕</span>
+                <kbd>Ctrl K</kbd>
+            </button>
+
+            <div class="online-status">
+
+                <span class="online-dot"></span>
+
+                <div>
+                    <strong>AI ONLINE</strong>
+                    <small id="clock">00:00:00</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         COMMAND PALETTE
+    ====================================================== -->
+
+    <div
+        class="command-overlay"
+        id="commandOverlay"
+    >
+
+        <div
+            class="command-modal"
+            id="commandModal"
+        >
+
+            <div class="command-header">
+
+                <span class="command-icon">⌘</span>
+
+                <div>
+                    <strong>Rezin Command</strong>
+                    <small>Navigate the AI system</small>
+                </div>
+
+                <button id="closeCommand">ESC</button>
+
+            </div>
+
+            <div class="command-search">
+
+                <span>⌕</span>
+
+                <input
+                    id="commandInput"
+                    type="text"
+                    placeholder="Search commands..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div
+                class="command-list"
+                id="commandList"
+            >
+
+                <button data-command="chat">
+                    <span>✦</span>
+                    <div>
+                        <strong>Open Rezin AI</strong>
+                        <small>Launch AI assistant</small>
+                    </div>
+                    <kbd>ENTER</kbd>
+                </button>
+
+                <button data-command="capabilities">
+                    <span>&lt;/&gt;</span>
+                    <div>
+                        <strong>Explore capabilities</strong>
+                        <small>See what Rezin can do</small>
+                    </div>
+                </button>
+
+                <button data-command="lab">
+                    <span>◉</span>
+                    <div>
+                        <strong>Open AI Lab</strong>
+                        <small>Enter the experimental zone</small>
+                    </div>
+                </button>
+
+                <button data-command="top">
+                    <span>↑</span>
+                    <div>
+                        <strong>Return to top</strong>
+                        <small>Go back to command center</small>
+                    </div>
+                </button>
+
+            </div>
+
+            <div class="command-footer">
+                <span>↑↓ Navigate</span>
+                <span>Enter Select</span>
+                <span>Esc Close</span>
+            </div>
+
         </div>
 
     </div>
 
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-    <!-- =========================================================
-         EVERYTHING AFTER ENTRANCE
-    ========================================================= -->
+    <main>
 
-    <div id="siteContent">
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-        <!-- =====================================================
-             SPACE
-        ===================================================== -->
+        <section
+            class="hero"
+            id="home"
+        >
 
-        <div class="space">
+            <div class="hero-content">
 
-            <canvas id="stars"></canvas>
+                <div class="eyebrow">
+                    <span class="pulse-dot"></span>
+                    NEXT GENERATION PERSONAL AI
+                </div>
 
-            <div class="nebula one"></div>
-            <div class="nebula two"></div>
+                <h1>
 
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
+                    <span class="hero-line">
+                        Think
+                    </span>
 
-        </div>
+                    <span class="hero-line gradient-text">
+                        Beyond.
+                    </span>
 
+                </h1>
 
-        <!-- =====================================================
-             MOBILE BUTTON
-        ===================================================== -->
+                <p class="hero-description">
 
-        <button
-            class="mobile-menu"
-            id="mobileMenu"
-            type="button"
-            aria-label="Open menu">
+                    Meet
+                    <strong>Rezin AI</strong> —
+                    an intelligent digital workspace
+                    designed to help you
+                    <strong>learn, code, create,
+                    solve and explore.</strong>
 
-            ☰
+                </p>
 
-        </button>
+                <!-- PROMPT CHIPS -->
 
+                <div class="prompt-chips">
 
-        <!-- =====================================================
-             SIDEBAR
-        ===================================================== -->
+                    <button data-prompt="Help me build a website">
+                        Build a website
+                    </button>
 
-        <aside
-            class="sidebar"
-            id="sidebar">
+                    <button data-prompt="Explain something to me">
+                        Explain something
+                    </button>
 
-            <div class="side-title">
-                REZIN AI SYSTEM
+                    <button data-prompt="Give me a creative idea">
+                        Generate an idea
+                    </button>
+
+                    <button data-prompt="Help me solve a problem">
+                        Solve a problem
+                    </button>
+
+                </div>
+
+                <div class="hero-actions">
+
+                    <button
+                        class="btn btn-primary magnetic"
+                        id="openAI"
+                    >
+                        <span>✦</span>
+                        Open Rezin AI
+                        <b>→</b>
+                    </button>
+
+                    <button
+                        class="btn btn-secondary magnetic"
+                        id="exploreButton"
+                    >
+                        Explore System
+                        <b>↓</b>
+                    </button>
+
+                </div>
+
+                <!-- MINI STATS -->
+
+                <div class="hero-stats">
+
+                    <div class="hero-stat">
+                        <strong>∞</strong>
+                        <span>Ideas</span>
+                    </div>
+
+                    <div class="stat-line"></div>
+
+                    <div class="hero-stat">
+                        <strong>24/7</strong>
+                        <span>Ready</span>
+                    </div>
+
+                    <div class="stat-line"></div>
+
+                    <div class="hero-stat">
+                        <strong>AI</strong>
+                        <span>Powered</span>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="menu">
+            <!-- =================================================
+                 3D AI CORE
+            ================================================== -->
 
-                <button
-                    class="menu-button active"
-                    data-section="chat"
-                    type="button">
+            <div
+                class="ai-stage"
+                id="aiStage"
+            >
 
-                    <div class="menu-icon">
-                        ✦
+                <div class="stage-label label-top">
+                    <span></span>
+                    NEURAL CORE
+                </div>
+
+                <div class="stage-label label-right">
+                    3D ENGINE
+                </div>
+
+                <div class="stage-label label-bottom">
+                    REZIN-CORE
+                </div>
+
+                <div class="core-shadow"></div>
+
+                <div class="core-system">
+
+                    <div class="core-ring ring-a"></div>
+                    <div class="core-ring ring-b"></div>
+                    <div class="core-ring ring-c"></div>
+                    <div class="core-ring ring-d"></div>
+
+                    <div class="energy-wave wave-a"></div>
+                    <div class="energy-wave wave-b"></div>
+
+                    <div class="ai-core">
+
+                        <div class="core-inner">
+                            <span>R</span>
+                        </div>
+
+                        <div class="core-scan"></div>
+
                     </div>
 
-                    <div class="menu-text">
-                        <strong>AI Chat</strong>
-                        <small>TALK WITH REZIN AI</small>
+                    <div
+                        class="orbit-particle p1"
+                    ></div>
+
+                    <div
+                        class="orbit-particle p2"
+                    ></div>
+
+                    <div
+                        class="orbit-particle p3"
+                    ></div>
+
+                    <div
+                        class="orbit-particle p4"
+                    ></div>
+
+                </div>
+
+                <div class="core-info">
+
+                    <span class="core-status"></span>
+
+                    <div>
+                        <strong>REZIN CORE</strong>
+                        <small>INTELLIGENCE ACTIVE</small>
                     </div>
 
-                </button>
+                </div>
 
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <section class="quick-section">
+
+            <div class="section-mini-title">
+                <span>01</span>
+                QUICK ACCESS
+            </div>
+
+            <div class="quick-grid">
 
                 <button
-                    class="menu-button"
-                    data-section="coding"
-                    type="button">
+                    class="quick-card tilt"
+                    data-prompt="Help me write code"
+                >
 
-                    <div class="menu-icon">
+                    <div class="quick-icon purple">
                         &lt;/&gt;
                     </div>
 
-                    <div class="menu-text">
-                        <strong>Coding</strong>
-                        <small>BUILD &amp; DEBUG</small>
+                    <div>
+                        <strong>Code with AI</strong>
+                        <span>Build • Debug • Explain</span>
                     </div>
+
+                    <b>↗</b>
 
                 </button>
 
-
                 <button
-                    class="menu-button"
-                    data-section="learning"
-                    type="button">
+                    class="quick-card tilt"
+                    data-prompt="Teach me something interesting"
+                >
 
-                    <div class="menu-icon">
+                    <div class="quick-icon blue">
                         ◈
                     </div>
 
-                    <div class="menu-text">
-                        <strong>Learning</strong>
-                        <small>UNDERSTAND MORE</small>
+                    <div>
+                        <strong>Learn</strong>
+                        <span>Understand complex ideas</span>
                     </div>
+
+                    <b>↗</b>
 
                 </button>
 
-
                 <button
-                    class="menu-button"
-                    data-section="creative"
-                    type="button">
+                    class="quick-card tilt"
+                    data-prompt="Give me a creative project idea"
+                >
 
-                    <div class="menu-icon">
+                    <div class="quick-icon pink">
                         ✧
                     </div>
 
-                    <div class="menu-text">
-                        <strong>Creative</strong>
-                        <small>CREATE IDEAS</small>
+                    <div>
+                        <strong>Create</strong>
+                        <span>Ideas • Design • Projects</span>
                     </div>
+
+                    <b>↗</b>
 
                 </button>
 
-
                 <button
-                    class="menu-button"
-                    data-section="problem"
-                    type="button">
+                    class="quick-card tilt"
+                    data-prompt="Help me solve a difficult problem"
+                >
 
-                    <div class="menu-icon">
+                    <div class="quick-icon cyan">
                         ⌁
                     </div>
 
-                    <div class="menu-text">
-                        <strong>Problem Solving</strong>
-                        <small>THINK &amp; SOLVE</small>
+                    <div>
+                        <strong>Solve</strong>
+                        <span>Break problems into steps</span>
                     </div>
 
-                </button>
-
-
-                <button
-                    class="menu-button"
-                    data-section="explore"
-                    type="button">
-
-                    <div class="menu-icon">
-                        ◎
-                    </div>
-
-                    <div class="menu-text">
-                        <strong>Explore AI</strong>
-                        <small>DISCOVER MORE</small>
-                    </div>
+                    <b>↗</b>
 
                 </button>
 
             </div>
 
+        </section>
 
-            <div class="side-bottom">
+        <!-- =================================================
+             CAPABILITIES
+        ================================================== -->
 
-                <strong>REZIN AI</strong><br>
+        <section
+            class="capabilities section"
+            id="capabilities"
+        >
 
-                Personal AI project<br>
+            <div class="section-heading reveal">
 
-                System interface v1.0
-
-            </div>
-
-        </aside>
-
-
-        <!-- =====================================================
-             TOP BAR
-        ===================================================== -->
-
-        <header
-            class="topbar"
-            id="topbar">
-
-            <div class="brand">
-
-                <div class="brand-orb"></div>
-
-                Rezin <span>AI</span>
-
-            </div>
-
-            <div class="status">
-
-                <span class="status-dot"></span>
-
-                AI SYSTEM ONLINE
-
-            </div>
-
-        </header>
-
-
-        <!-- =====================================================
-             MAIN
-        ===================================================== -->
-
-        <main>
-
-            <!-- =================================================
-                 HERO
-            ================================================= -->
-
-            <section
-                class="hero"
-                id="home">
-
-                <div class="hero-copy">
-
-                    <div class="eyebrow">
-                        NEXT GENERATION AI
-                    </div>
-
-                    <h1>
-
-                        <span class="line">
-                            Think
-                        </span>
-
-                        <span class="line gradient">
-                            Beyond.
-                        </span>
-
-                    </h1>
-
-                    <p class="hero-description">
-
-                        Welcome to <strong>Rezin AI</strong> —
-                        a futuristic AI assistant built to
-                        help you <strong>learn, code,
-                        create, solve problems</strong>,
-                        and explore what's possible with
-                        artificial intelligence.
-
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <button
-                            class="cta primary"
-                            id="openAI"
-                            type="button">
-
-                            ✦ Open Rezin AI
-
-                        </button>
-
-                        <button
-                            class="cta secondary"
-                            id="exploreButton"
-                            type="button">
-
-                            Explore Capabilities ↓
-
-                        </button>
-
-                    </div>
-
+                <div class="section-number">
+                    02
                 </div>
 
+                <div>
 
-                <!-- =============================================
-                     3D UNIVERSE
-                ============================================== -->
-
-                <div
-                    class="universe"
-                    id="universe">
-
-                    <div class="ring one"></div>
-                    <div class="ring two"></div>
-                    <div class="ring three"></div>
-
-                    <div class="holo a">
-                        AI CORE
-                    </div>
-
-                    <div class="holo b">
-                        THINK
-                    </div>
-
-                    <div class="holo c">
-                        CREATE
-                    </div>
-
-                    <div class="holo d">
-                        LEARN
-                    </div>
-
-                    <div class="core"></div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 CAPABILITIES
-            ================================================= -->
-
-            <section
-                class="capabilities"
-                id="capabilities">
-
-                <div class="section-heading">
-
-                    <small>
-                        EXPLORE THE SYSTEM
-                    </small>
+                    <span class="section-kicker">
+                        INTELLIGENCE MODULES
+                    </span>
 
                     <h2>
-                        What can
-                        <span class="gradient">
-                            Rezin AI
+                        One AI.
+                        <span class="gradient-text">
+                            Many possibilities.
                         </span>
-                        do?
                     </h2>
 
                     <p>
-                        Explore the different ways
-                        Rezin AI can assist you.
-                        Select a capability from the
-                        left navigation or explore
-                        the modules below.
+                        Rezin AI adapts to different
+                        types of work, learning and
+                        creativity.
                     </p>
 
                 </div>
 
+            </div>
 
-                <div class="capability-grid">
+            <div class="capability-grid">
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="chat"
+                >
 
-                        <div class="cap-icon">
-                            ✦
-                        </div>
+                    <div class="card-number">
+                        01
+                    </div>
 
-                        <h3>
-                            AI Conversations
-                        </h3>
+                    <div class="cap-icon">
+                        ✦
+                    </div>
 
-                        <p>
-                            Ask questions, brainstorm
-                            ideas, explain concepts,
-                            or simply explore topics
-                            with the Rezin AI assistant.
-                        </p>
+                    <h3>AI Conversations</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Ask questions, brainstorm,
+                        discuss ideas and explore
+                        almost any topic with Rezin AI.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
+                </article>
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="coding"
+                >
 
-                        <div class="cap-icon">
-                            &lt;/&gt;
-                        </div>
+                    <div class="card-number">
+                        02
+                    </div>
 
-                        <h3>
-                            Coding Assistant
-                        </h3>
+                    <div class="cap-icon">
+                        &lt;/&gt;
+                    </div>
 
-                        <p>
-                            Work with HTML, CSS,
-                            JavaScript, Python and
-                            other programming concepts.
-                        </p>
+                    <h3>Coding Intelligence</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Work through HTML, CSS,
+                        JavaScript, Python and
+                        programming problems.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
+                </article>
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="learning"
+                >
 
-                        <div class="cap-icon">
-                            ◈
-                        </div>
+                    <div class="card-number">
+                        03
+                    </div>
 
-                        <h3>
-                            Learn Anything
-                        </h3>
+                    <div class="cap-icon">
+                        ◈
+                    </div>
 
-                        <p>
-                            Turn complicated concepts
-                            into understandable
-                            explanations and examples.
-                        </p>
+                    <h3>Learning Engine</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Turn complicated subjects
+                        into simple explanations,
+                        examples and steps.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
+                </article>
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="creative"
+                >
 
-                        <div class="cap-icon">
-                            ✧
-                        </div>
+                    <div class="card-number">
+                        04
+                    </div>
 
-                        <h3>
-                            Creative Ideas
-                        </h3>
+                    <div class="cap-icon">
+                        ✧
+                    </div>
 
-                        <p>
-                            Generate ideas for websites,
-                            projects, stories, designs,
-                            games and more.
-                        </p>
+                    <h3>Creative Engine</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Generate concepts for
+                        websites, projects, games,
+                        stories and designs.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
+                </article>
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="problem"
+                >
 
-                        <div class="cap-icon">
-                            ⌁
-                        </div>
+                    <div class="card-number">
+                        05
+                    </div>
 
-                        <h3>
-                            Problem Solving
-                        </h3>
+                    <div class="cap-icon">
+                        ⌁
+                    </div>
 
-                        <p>
-                            Break difficult questions
-                            into smaller steps and
-                            work through them logically.
-                        </p>
+                    <h3>Problem Solver</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Break difficult tasks into
+                        smaller pieces and reason
+                        through them step by step.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
+                </article>
 
-                    <article class="capability">
+                <article
+                    class="capability tilt reveal"
+                    data-mode="explore"
+                >
 
-                        <div class="cap-icon">
-                            ◎
-                        </div>
+                    <div class="card-number">
+                        06
+                    </div>
 
-                        <h3>
-                            Explore
-                        </h3>
+                    <div class="cap-icon">
+                        ◎
+                    </div>
 
-                        <p>
-                            Discover new possibilities,
-                            technologies, ideas and
-                            ways to use AI.
-                        </p>
+                    <h3>AI Explorer</h3>
 
-                        <span class="arrow">
-                            →
-                        </span>
+                    <p>
+                        Discover new ways to use
+                        artificial intelligence and
+                        experiment with ideas.
+                    </p>
 
-                    </article>
+                    <button class="card-launch">
+                        Launch <span>→</span>
+                    </button>
 
-                </div>
+                </article>
 
-            </section>
+            </div>
 
+        </section>
 
-            <!-- =================================================
-                 AI LAB
-            ================================================= -->
+        <!-- =================================================
+             AI LAB
+        ================================================== -->
 
-            <section class="ai-lab">
+        <section
+            class="lab-section section"
+            id="explore"
+        >
 
-                <div class="lab">
+            <div class="lab-shell reveal">
+
+                <div class="lab-grid">
 
                     <div class="lab-copy">
 
+                        <div class="section-kicker">
+                            03 / EXPERIMENTAL SPACE
+                        </div>
+
                         <h2>
-                            Enter the
-                            <span class="gradient">
+                            Welcome to the
+                            <span class="gradient-text">
                                 AI Lab.
                             </span>
                         </h2>
 
                         <p>
-                            Rezin AI isn't just a page.
-                            It's an interactive space
-                            built around an AI assistant.
-                            Open the chatbot and start
-                            exploring.
+                            This is where ideas become
+                            interactions. Launch Rezin AI,
+                            test concepts, ask questions,
+                            and explore what your personal
+                            AI system can do.
                         </p>
 
-                        <div class="hero-actions">
+                        <div class="lab-buttons">
 
                             <button
-                                class="cta primary"
+                                class="btn btn-primary"
                                 id="labAI"
-                                type="button">
+                            >
+                                Launch AI
+                                <span>✦</span>
+                            </button>
 
-                                Launch AI ✦
-
+                            <button
+                                class="btn btn-secondary"
+                                id="terminalButton"
+                            >
+                                View System
                             </button>
 
                         </div>
 
                     </div>
 
-                    <div class="lab-orb"></div>
+                    <div class="lab-visual">
+
+                        <div class="lab-grid-lines"></div>
+
+                        <div class="lab-orb">
+
+                            <div class="lab-orbit orbit-1"></div>
+                            <div class="lab-orbit orbit-2"></div>
+                            <div class="lab-orbit orbit-3"></div>
+
+                            <div class="lab-core">
+                                R
+                            </div>
+
+                        </div>
+
+                        <div class="lab-data data-1">
+                            NEURAL
+                        </div>
+
+                        <div class="lab-data data-2">
+                            LOGIC
+                        </div>
+
+                        <div class="lab-data data-3">
+                            CREATE
+                        </div>
+
+                    </div>
 
                 </div>
 
-            </section>
+            </div>
 
-        </main>
+        </section>
 
+        <!-- =================================================
+             SYSTEM PANEL
+        ================================================== -->
 
-        <!-- =====================================================
-             FOOTER
-        ===================================================== -->
+        <section
+            class="system-section section"
+            id="system"
+        >
 
-        <footer>
+            <div class="section-heading reveal">
 
-            © 2026
-            <strong>Rezin AI</strong>
-            — Created by Rezin
+                <div class="section-number">
+                    04
+                </div>
 
-        </footer>
+                <div>
 
+                    <span class="section-kicker">
+                        SYSTEM INTERFACE
+                    </span>
+
+                    <h2>
+                        Inside
+                        <span class="gradient-text">
+                            Rezin.
+                        </span>
+                    </h2>
+
+                    <p>
+                        A visual control layer for
+                        your personal AI experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="system-grid">
+
+                <div class="terminal reveal">
+
+                    <div class="terminal-top">
+
+                        <div class="terminal-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>
+                            rezin-core
+                        </span>
+
+                        <small>
+                            ONLINE
+                        </small>
+
+                    </div>
+
+                    <div
+                        class="terminal-body"
+                        id="terminalBody"
+                    >
+
+                        <div>
+                            <span class="terminal-purple">
+                                rezin
+                            </span>
+                            <span class="terminal-muted">
+                                @ai
+                            </span>
+                            :
+                            <span class="terminal-blue">
+                                ~
+                            </span>
+                            $
+                            initializing...
+                        </div>
+
+                        <div class="terminal-success">
+                            ✓ Rezin Core interface loaded
+                        </div>
+
+                        <div class="terminal-success">
+                            ✓ Neural workspace ready
+                        </div>
+
+                        <div class="terminal-success">
+                            ✓ AI assistant connection available
+                        </div>
+
+                        <div class="terminal-muted">
+                            Waiting for your next command...
+                        </div>
+
+                        <div class="terminal-cursor">
+                            _
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="system-cards">
+
+                    <div class="system-card reveal">
+
+                        <span>01</span>
+
+                        <div>
+                            <strong>Fast Interface</strong>
+                            <p>
+                                Designed to stay clean,
+                                responsive and lightweight.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="system-card reveal">
+
+                        <span>02</span>
+
+                        <div>
+                            <strong>Interactive Core</strong>
+                            <p>
+                                3D effects react to
+                                your movement and input.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="system-card reveal">
+
+                        <span>03</span>
+
+                        <div>
+                            <strong>AI Ready</strong>
+                            <p>
+                                Your Botpress assistant
+                                remains connected to the UI.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="final-section">
+
+            <div class="final-glow"></div>
+
+            <div class="final-content reveal">
+
+                <span class="section-kicker">
+                    THE NEXT COMMAND IS YOURS
+                </span>
+
+                <h2>
+                    What will you
+                    <span class="gradient-text">
+                        create?
+                    </span>
+                </h2>
+
+                <p>
+                    Open Rezin AI and start exploring.
+                </p>
+
+                <button
+                    class="btn btn-primary final-button"
+                    id="finalAI"
+                >
+                    <span>✦</span>
+                    Start with Rezin AI
+                    <b>→</b>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="mini-orb">
+                R
+            </div>
+
+            <strong>
+                Rezin <span>AI</span>
+            </strong>
+
+        </div>
+
+        <p>
+            Personal intelligence interface.
+            Built by Rezin.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 REZIN AI // SYSTEM ONLINE
+        </small>
+
+    </footer>
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        <span>✦</span>
+        <div>
+            <strong id="toastTitle">
+                Rezin AI
+            </strong>
+            <small id="toastText">
+                System ready.
+            </small>
+        </div>
     </div>
 
-
-    <!-- =========================================================
-         JAVASCRIPT
-    ========================================================= -->
-
-    <script>
-
-        /* =========================================================
-           ENTRANCE VIDEO
-        ========================================================= */
-
-        const entranceScreen =
-            document.getElementById("entranceScreen");
-
-        const entranceVideo =
-            document.getElementById("entranceVideo");
-
-        const siteContent =
-            document.getElementById("siteContent");
-
-        const videoFallback =
-            document.getElementById("videoFallback");
-
-        let introFinished = false;
-
-
-        function finishEntrance() {
-
-            if (introFinished) return;
-
-            introFinished = true;
-
-            siteContent.classList.add("show");
-
-            entranceScreen.classList.add("hide");
-
-            document.body.classList.remove(
-                "intro-active"
-            );
-
-            setTimeout(() => {
-
-                entranceScreen.remove();
-
-            }, 1400);
-
-        }
-
-
-        entranceVideo.addEventListener(
-            "ended",
-            finishEntrance
-        );
-
-
-        entranceVideo.addEventListener(
-            "error",
-            () => {
-
-                console.error(
-                    "Entrance video could not be loaded. Check assets/entrance.mp4"
-                );
-
-                videoFallback.style.display =
-                    "block";
-
-                setTimeout(
-                    finishEntrance,
-                    1200
-                );
-
-            }
-        );
-
-
-        window.addEventListener(
-            "load",
-            async () => {
-
-                try {
-
-                    await entranceVideo.play();
-
-                } catch (error) {
-
-                    console.log(
-                        "Autoplay issue:",
-                        error
-                    );
-
-                }
-
-                if (entranceVideo.ended) {
-                    finishEntrance();
-                }
-
-            }
-        );
-
-
-        /* =========================================================
-           STAR ENGINE
-        ========================================================= */
-
-        const canvas =
-            document.getElementById("stars");
-
-        const ctx =
-            canvas.getContext("2d");
-
-        let stars = [];
-
-        let mouseX = 0;
-        let mouseY = 0;
-
-
-        function resizeCanvas() {
-
-            canvas.width =
-                window.innerWidth;
-
-            canvas.height =
-                window.innerHeight;
-
-            createStars();
-
-        }
-
-
-        function createStars() {
-
-            stars = [];
-
-            const amount =
-                Math.min(
-                    350,
-                    Math.floor(
-                        window.innerWidth *
-                        window.innerHeight /
-                        5000
-                    )
-                );
-
-
-            for (
-                let i = 0;
-                i < amount;
-                i++
-            ) {
-
-                stars.push({
-
-                    x:
-                        Math.random() *
-                        canvas.width,
-
-                    y:
-                        Math.random() *
-                        canvas.height,
-
-                    size:
-                        Math.random() *
-                        1.7 +
-                        0.2,
-
-                    speed:
-                        Math.random() *
-                        0.25 +
-                        0.05,
-
-                    alpha:
-                        Math.random() *
-                        0.7 +
-                        0.2,
-
-                    depth:
-                        Math.random()
-
-                });
-
-            }
-
-        }
-
-
-        function drawStars() {
-
-            ctx.clearRect(
-                0,
-                0,
-                canvas.width,
-                canvas.height
-            );
-
-
-            for (const star of stars) {
-
-                star.y -= star.speed;
-
-
-                if (star.y < -5) {
-
-                    star.y =
-                        canvas.height + 5;
-
-                    star.x =
-                        Math.random() *
-                        canvas.width;
-
-                }
-
-
-                const parallaxX =
-                    mouseX *
-                    star.depth *
-                    10;
-
-                const parallaxY =
-                    mouseY *
-                    star.depth *
-                    10;
-
-
-                ctx.beginPath();
-
-                ctx.arc(
-                    star.x + parallaxX,
-                    star.y + parallaxY,
-                    star.size,
-                    0,
-                    Math.PI * 2
-                );
-
-
-                ctx.fillStyle =
-                    `rgba(
-                        190,
-                        185,
-                        255,
-                        ${star.alpha}
-                    )`;
-
-
-                ctx.fill();
-
-            }
-
-
-            requestAnimationFrame(
-                drawStars
-            );
-
-        }
-
-
-        window.addEventListener(
-            "resize",
-            resizeCanvas
-        );
-
-
-        resizeCanvas();
-
-        drawStars();
-
-
-        /* =========================================================
-           MOUSE TRACKING
-        ========================================================= */
-
-        document.addEventListener(
-            "mousemove",
-            (event) => {
-
-                mouseX =
-                    event.clientX /
-                    window.innerWidth -
-                    0.5;
-
-                mouseY =
-                    event.clientY /
-                    window.innerHeight -
-                    0.5;
-
-            }
-        );
-
-
-        /* =========================================================
-           3D UNIVERSE
-        ========================================================= */
-
-        const universe =
-            document.getElementById(
-                "universe"
-            );
-
-
-        document.addEventListener(
-            "mousemove",
-            (event) => {
-
-                if (
-                    window.innerWidth <
-                    700
-                ) return;
-
-
-                const x =
-                    event.clientX /
-                    window.innerWidth -
-                    0.5;
-
-                const y =
-                    event.clientY /
-                    window.innerHeight -
-                    0.5;
-
-
-                universe.style.transform =
-                    `rotateX(${-y * 8}deg)
-                     rotateY(${x * 10}deg)`;
-
-            }
-        );
-
-
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
-
-        const topbar =
-            document.getElementById(
-                "topbar"
-            );
-
-
-        window.addEventListener(
-            "scroll",
-            () => {
-
-                if (
-                    window.scrollY > 30
-                ) {
-
-                    topbar.classList.add(
-                        "scrolled"
-                    );
-
-                } else {
-
-                    topbar.classList.remove(
-                        "scrolled"
-                    );
-
-                }
-
-            }
-        );
-
-
-        /* =========================================================
-           MOBILE SIDEBAR
-        ========================================================= */
-
-        const mobileMenu =
-            document.getElementById(
-                "mobileMenu"
-            );
-
-        const sidebar =
-            document.getElementById(
-                "sidebar"
-            );
-
-
-        mobileMenu.addEventListener(
-            "click",
-            () => {
-
-                sidebar.classList.toggle(
-                    "open"
-                );
-
-            }
-        );
-
-
-        /* =========================================================
-           SIDEBAR INTERACTION
-        ========================================================= */
-
-        const menuButtons =
-            document.querySelectorAll(
-                ".menu-button"
-            );
-
-
-        menuButtons.forEach(
-            button => {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-                        menuButtons.forEach(
-                            item =>
-                                item.classList.remove(
-                                    "active"
-                                )
-                        );
-
-
-                        button.classList.add(
-                            "active"
-                        );
-
-
-                        const section =
-                            button.dataset.section;
-
-
-                        showSystemMessage(
-                            section
-                        );
-
-
-                        if (
-                            window.innerWidth <
-                            700
-                        ) {
-
-                            sidebar.classList.remove(
-                                "open"
-                            );
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* =========================================================
-           SYSTEM MESSAGE
-        ========================================================= */
-
-        function showSystemMessage(
-            section
-        ) {
-
-            const names = {
-
-                chat:
-                    "AI Chat selected — open the Rezin AI assistant.",
-
-                coding:
-                    "Coding mode selected — use Rezin AI for programming help.",
-
-                learning:
-                    "Learning mode selected — ask Rezin AI to explain a topic.",
-
-                creative:
-                    "Creative mode selected — brainstorm ideas with Rezin AI.",
-
-                problem:
-                    "Problem Solving selected — break difficult problems into steps.",
-
-                explore:
-                    "Explore mode selected — discover what AI can do."
-
-            };
-
-
-            const old =
-                document.querySelector(
-                    ".system-message"
-                );
-
-
-            if (old) {
-                old.remove();
-            }
-
-
-            const message =
-                document.createElement(
-                    "div"
-                );
-
-
-            message.className =
-                "system-message";
-
-
-            message.textContent =
-                names[section] ||
-                "Rezin AI ready.";
-
-
-            Object.assign(
-                message.style,
-                {
-
-                    position: "fixed",
-
-                    left: "50%",
-
-                    bottom: "30px",
-
-                    transform:
-                        "translateX(-50%)",
-
-                    zIndex: "99999",
-
-                    padding:
-                        "13px 20px",
-
-                    borderRadius:
-                        "12px",
-
-                    background:
-                        "rgba(10,10,22,.94)",
-
-                    border:
-                        "1px solid rgba(126,108,255,.3)",
-
-                    color: "white",
-
-                    fontSize: "12px",
-
-                    backdropFilter:
-                        "blur(20px)",
-
-                    boxShadow:
-                        "0 20px 60px rgba(0,0,0,.45)"
-
-                }
-            );
-
-
-            document.body.appendChild(
-                message
-            );
-
-
-            setTimeout(
-                () => {
-
-                    message.style.opacity =
-                        "0";
-
-                    message.style.transition =
-                        "0.4s";
-
-                    setTimeout(
-                        () =>
-                            message.remove(),
-                        400
-                    );
-
-                },
-                2600
-            );
-
-        }
-
-
-        /* =========================================================
-           OPEN AI CHATBOT
-        ========================================================= */
-
-        function openAI() {
-
-            showSystemMessage(
-                "chat"
-            );
-
-            setTimeout(() => {
-
-                const botpressButton =
-                    document.querySelector(
-                        '[aria-label*="chat" i], [aria-label*="open" i]'
-                    );
-
-                if (botpressButton) {
-                    botpressButton.click();
-                }
-
-            }, 500);
-
-        }
-
-
-        document
-            .getElementById("openAI")
-            .addEventListener(
-                "click",
-                openAI
-            );
-
-
-        document
-            .getElementById("labAI")
-            .addEventListener(
-                "click",
-                openAI
-            );
-
-
-        /* =========================================================
-           EXPLORE BUTTON
-        ========================================================= */
-
-        document
-            .getElementById(
-                "exploreButton"
-            )
-            .addEventListener(
-                "click",
-                () => {
-
-                    document
-                        .getElementById(
-                            "capabilities"
-                        )
-                        .scrollIntoView({
-                            behavior:
-                                "smooth"
-                        });
-
-                }
-            );
-
-
-        /* =========================================================
-           SCROLL REVEAL
-        ========================================================= */
-
-        const capabilityCards =
-            document.querySelectorAll(
-                ".capability"
-            );
-
-
-        const revealObserver =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(
-                        (entry, index) => {
-
-                            if (
-                                entry.isIntersecting
-                            ) {
-
-                                setTimeout(
-                                    () => {
-
-                                        entry.target
-                                            .classList
-                                            .add(
-                                                "visible"
-                                            );
-
-                                    },
-                                    index * 80
-                                );
-
-
-                                revealObserver
-                                    .unobserve(
-                                        entry.target
-                                    );
-
-                            }
-
-                        }
-                    );
-
-                },
-                {
-                    threshold: 0.12
-                }
-            );
-
-
-        capabilityCards.forEach(
-            card =>
-                revealObserver.observe(
-                    card
-                )
-        );
-
-
-        /* =========================================================
-           KEYBOARD SHORTCUT
-        ========================================================= */
-
-        document.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key === "/" &&
-                    ![
-                        "INPUT",
-                        "TEXTAREA"
-                    ].includes(
-                        document.activeElement.tagName
-                    )
-                ) {
-
-                    openAI();
-
-                }
-
-            }
-        );
-
-    </script>
-
-
-    <!-- =========================================================
-         BOTPRESS AI CHATBOT
-    ========================================================= -->
-
-    <script
-        src="https://cdn.botpress.cloud/webchat/v5.0/inject.js">
-    </script>
+    <!-- =====================================================
+         BOTPRESS
+    ====================================================== -->
+
+    <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
 
     <script
         src="https://files.bpcontent.cloud/2026/10/02/11/20261002112133-NA0938WP.js"
-        defer>
-    </script>
+        defer
+    ></script>
+
+    <!-- =====================================================
+         YOUR JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
 
 </body>
 
